@@ -15,7 +15,7 @@ format:
 ```markdown
 ---
 title: "Week 05 Assignment"
-name: "Your Name"
+author: "Your Name"
 format: html
 embed-resources: true
 ---

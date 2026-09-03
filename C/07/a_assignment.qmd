@@ -16,7 +16,7 @@ format:
 ```markdown
 ---
 title: "Lecture 07a Assignment"
-name: "Your Name"
+author: "Your Name"
 format: html
 embed-resources: true
 ---

@@ -15,8 +15,8 @@ format:
 
 ```markdown
 ---
-title: "Lecture 09c Assignment"
-name: "Your Name"
+title: "Lecture 09a Assignment"
+author: "Your Name"
 format: html
 embed-resources: true
 ---
