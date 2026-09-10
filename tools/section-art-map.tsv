@@ -59,7 +59,8 @@ A/03/a	1	Strings	strings	in-reveal	wired	text-box	zzcpieew	Replaces `quotation`,
 A/03/a	2	Factors	factors	in-reveal	wired	bullet-list	jkavsxeh	A fixed, ordered set of levels.
 A/03/a	3	Packages	install	in-reveal	wired	box-plus	okzvfdcb	A package with a plus on it. Replaces inbox-download, which read as a generic download rather than as adding a package.
 A/03/b	1	Data Frames	data_frame	in-reveal	wired	browser-spreadsheet	wfjtyzqa	A literal grid of rows and columns. The earlier pick was the abstract `data` glyph, chosen only because spreadsheet.json was in use on a Unit A content slide; retiring those icons freed the concept.
-A/03/b	2	Data Exploration	explore	in-reveal	wired	binoculars	dpmsxdtz	Looking around before you know what you are looking for. Replaces magnifier, which reads as searching for something known.
+A/03/b	2	Data Files	file_text	in-reveal	wired	file-text	hmpomorl	Deliberate reuse: `file_text` also carries the Scripts divider in A/01/b. Every other icon in the catalog is spoken for and a data-file glyph would have to be exported; a plain document reads correctly for both sections. Retire the reuse if one is ever added.
+A/03/b	3	Data Exploration	explore	in-reveal	wired	binoculars	dpmsxdtz	Looking around before you know what you are looking for. Replaces magnifier, which reads as searching for something known.
 B/04/a	1	Research Methods	questionnaire	in-reveal	wired	clipboard-questionnaire	snlmykub	The deck's methods are experiments, observational studies and a survey, never a wet lab. Replaces test_tubes.
 B/04/a	2	Populations and Parameters	people	in-reveal	catalog	-	-	The whole crowd, which is what a population is.
 B/04/a	3	Samples and Statistics	counter	in-reveal	catalog	-	-	A tally counter: counting a subset by hand.

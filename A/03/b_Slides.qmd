@@ -557,6 +557,12 @@ Worth running on any dataset you did not build yourself, before you write code
 that assumes what is in it.
 :::
 
+# Data Files
+
+::: {.section-art}
+{{< lif "../../icons/file_text.json" state=in-reveal colors=secondary:#2a76dd class=rc >}}
+:::
+
 ## Data Files {.fs80}
 
 -   Data is usually stored in [data files]{.b .green}
