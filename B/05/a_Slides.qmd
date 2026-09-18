@@ -28,6 +28,26 @@ Unit {{< meta unit >}} · Chapter {{< meta chapter >}} · Lecture {{< meta chapt
 ![]({{< meta unit-art >}}){.t-art}
 :::
 
+## Roadmap: Hypothesis Testing
+
+::: {.columns .pv4}
+
+::: {.column width="60%"}
+1. Statistical Hypotheses
+
+2. NHST Logic
+
+3. NHST Nuts and Bolts
+
+4. $p$-values and Pragmatics
+:::
+
+::: {.column .tc .pv4 width="40%"}
+{{< lif "../../icons/map.json" trigger=hover colors=secondary:#2a76dd class=rc >}}
+:::
+
+:::
+
 ```{r}
 #| echo: false
 #| message: false
@@ -116,7 +136,7 @@ $H_1$ is a "one-sided" and $H_2$ is a "two-sided" hypothesis.
 
 ## What is NHST?
 
-- In null hypothesis significance testing (NHST), the null hyp. is the defense and the alternative hyp. is the prosecution
+- In null hypothesis significance testing (NHST), the null hypothesis is the defense and the alternative hypothesis is the prosecution
 
 - The statistical test is the *judge and jury* (makes the decision)
 
@@ -210,12 +230,12 @@ NHST helps protect the null hypothesis from researchers who are incentivized to 
 
 ::: {.fragment}
 - If we set $\alpha$ to .05, we are accepting...
-    + Up to a 5% (1 in 20) chance of rejecting a true null hyp.
+    + Up to a 5% (1 in 20) chance of rejecting a true null hypothesis
 :::
 
 ::: {.fragment}
 - If we use a sample with 80% power, we are accepting...
-    + Up to a 20% (1 in 5) chance of retaining a false null hyp.
+    + Up to a 20% (1 in 5) chance of retaining a false null hypothesis
 :::
 
 ::: {.footer}
