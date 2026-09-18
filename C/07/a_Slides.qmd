@@ -28,6 +28,26 @@ Unit {{< meta unit >}} · Chapter {{< meta chapter >}} · Lecture {{< meta chapt
 ![]({{< meta unit-art >}}){.t-art}
 :::
 
+## Roadmap: Regression
+
+::: {.columns .pv4}
+
+::: {.column width="60%"}
+1. Introduction
+
+2. Regression Inference
+
+3. Centering
+
+4. Regression Effect Sizes
+:::
+
+::: {.column .tc .pv4 width="40%"}
+{{< lif "../../icons/map.json" trigger=hover colors=secondary:#2a76dd class=rc >}}
+:::
+
+:::
+
 ```{r setup}
 #| echo: false
 #| message: false
