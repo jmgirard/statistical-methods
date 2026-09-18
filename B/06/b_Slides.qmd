@@ -559,7 +559,7 @@ $$p' = p \times m$$
 :::
 
 ::: {.footer}
-Bonferonni is simple but very conservative
+Bonferroni is simple but very conservative
 :::
 
 ## Holm correction

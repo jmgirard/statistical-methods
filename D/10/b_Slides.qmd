@@ -623,7 +623,7 @@ $$b_0=`r round(cof2[[1]], 1)`^\ast, b_1= `r round(cof2[[2]], 1)`$$
 For each observation, we can calculate its...
 
 1. **Leverage:** How unusual are its $x$ values?
-    + e.g., $h_{ii}$ and Mahalonabis distance
+    + e.g., $h_{ii}$ and Mahalanobis distance
     
 2. **Distance:** How far is it from the regression line?
     + e.g., raw, standardized, or Studentized residuals

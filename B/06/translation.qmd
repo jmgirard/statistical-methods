@@ -32,7 +32,7 @@ For each study below, answer:
 
 > A reading intervention is supposed to bring struggling second-graders up to
 > the national benchmark of 90 words read correctly per minute. I run the
-> programme with 40 children and measure their reading fluency at the end of it.
+> program with 40 children and measure their reading fluency at the end of it.
 > I want to know whether this group has reached the benchmark.
 
 ## Example 2 (Cognitive)
@@ -44,10 +44,10 @@ For each study below, answer:
 
 ## Example 3 (Organizational)
 
-> Our company uses three different onboarding programmes across its regional
+> Our company uses three different onboarding programs across its regional
 > offices, and I want to know whether new hires end up equally satisfied under
 > all three. I have satisfaction scores from 210 new hires, each of whom went
-> through exactly one programme. The three offices are quite different sizes,
+> through exactly one program. The three offices are quite different sizes,
 > and I have been told satisfaction scores are much more spread out at one of
 > them.
 

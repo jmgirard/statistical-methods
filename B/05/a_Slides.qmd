@@ -160,7 +160,7 @@ NHST helps protect the null hypothesis from researchers who are incentivized to 
     
 2. [Reject the null hypothesis]{.b .blue}
     + There is enough evidence to conclude $\mu\neq3$
-    + The cereal's nutrion label should be changed...
+    + The cereal's nutrition label should be changed...
     + *It **does not** prove that this was deliberate fraud*
 
 ::: {.footer}

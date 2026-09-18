@@ -609,7 +609,7 @@ $$
 $$t_{obs}=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}$$
 
 - What is its sampling distribution under the null?
-    + The frequentist parameteric approach assumes:
+    + The frequentist parametric approach assumes:
 
 $$t_{obs} \sim t(\textit{df}=n-2, \mu=0, \sigma=1)$$
 

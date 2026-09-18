@@ -320,7 +320,7 @@ model_parameters(fit_w)
 ## Paired groups
 
 - Sometimes observations in our groups are related
-    + Obs. X in G1 is related somehow to obs. X in G2
+    + Observation X in G1 is related somehow to observation X in G2
     + e.g., repeated measures of the same person or thing
     
 - If we ignore these relationships in our modeling...
