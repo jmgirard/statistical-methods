@@ -379,7 +379,7 @@ In practice, we usually *only* have the sample's data and so using `sample()` is
 
 ::: {.columns}
 
-::: {.column}
+::: {.column width="45%"}
 #### Sample Mean
 
 The mean formulas are basically identical for both samples and populations
@@ -396,7 +396,7 @@ xbar
 
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="55%"}
 #### Sample Std. Deviation
 
 But the SD formulas differ a little (we subtract 1 to correct for small-sample bias)

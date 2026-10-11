@@ -579,7 +579,12 @@ plot(estimate_means(fit5, by = c("program", "sex")), join_dots = TRUE) + mytheme
 
 - For a continuous $x$ and two dummy codes $c_1$ and $d_1$:
 
-$$\hat{y} = b_0 + b_1 x + b_2 c_1 + b_3 d_1 + b_4 x c_1 + b_5 x d_1 + b_6 c_1 d_1 + b_7 x c_1 d_1$$
+$$
+\begin{aligned}
+\hat{y} = b_0 &+ b_1 x + b_2 c_1 + b_3 d_1 \\
+&+ b_4 x c_1 + b_5 x d_1 + b_6 c_1 d_1 + b_7 x c_1 d_1
+\end{aligned}
+$$
 
 - 3 main effects, 3 two-way terms, 1 three-way term
 

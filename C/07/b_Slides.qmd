@@ -322,12 +322,12 @@ r2(fit2, ci = 0.95)
 ## Estimating means by hand {.fs80}
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Model Equation: }&\hat{y}=b_0 + b_1(C_1)\\
 &\hat{y} = 4545.68 -683.41(C_1)\\ \\
 \text{Male penguins: }&\hat{y} = 4545.68 -683.41(0)=4545.68 \\
 \text{Female penguins: }&\hat{y} = 4545.68 -683.41(1)=3862.27
-\end{align}
+\end{aligned}
 $$
 
 ::: {.fragment}
@@ -595,16 +595,16 @@ r2(fit5, ci = 0.95)
 
 - Species explained 67% of the variance in body mass
 
-## Estimating means by hand
+## Estimating means by hand {.fs80}
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Equation: }&\hat{y} = b_0 + b_1(C_1) + b_2(C_2) \\
   &\hat{y} = 3700.66 + 32.43(C_1) + 1375.35(C_2) \\ \\
 \text{Adelie: }   &\hat{y} = 3700.66 + 32.43(0) + 1375.35(0) = 3700.66 \\
 \text{Chinstrap: }&\hat{y} = 3700.66 + 32.43(1) + 1375.35(0) = 3733.09 \\
 \text{Gentoo: }   &\hat{y} = 3700.66 + 32.43(0) + 1375.35(1) = 5076.01
-\end{align}
+\end{aligned}
 $$
 
 ## Estimating means in R

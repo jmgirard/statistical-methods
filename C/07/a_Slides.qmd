@@ -228,11 +228,11 @@ p + geom_smooth(method = "lm", se = FALSE, color = "salmon", linewidth = 2)
 - We refer to these differences as the model's [residuals]{.b .pink}
 
 $$
-\begin{align}
+\begin{aligned}
 \color{red}{\hat{y}_i} &= \color{blue}{b_0} + \color{blue}{b_1}x_i\\
 y_i &= \color{blue}{b_0} + \color{blue}{b_1}x_i + \color{magenta}{e_i} \\
 \color{magenta}{e_i} &= y_i - \color{red}{\hat{y}_i}
-\end{align}
+\end{aligned}
 $$
 
 ## Visualizing Regression Residuals

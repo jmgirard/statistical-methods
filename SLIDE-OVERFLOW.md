@@ -252,6 +252,41 @@ for (const s of [...document.querySelectorAll('.reveal .slides section')]
 }
 ```
 
+### Width: the height sweep cannot see it
+
+The `scrollHeight` check does not find an equation that runs off the right edge. Three such
+slides reached students: `C/07/b` "Estimating means by hand", `C/07/c` "Standardized partial
+effects", and `C/08/b` "Expanding the equation". Measure width as a separate step. Compare each
+equation row to the slide and to its `.column`. Two equations side by side can collide in the
+middle of the slide, and the slide edge check does not see that.
+
+```js
+const sr = cur.getBoundingClientRect(), k = sr.width / cur.offsetWidth;
+for (const b of cur.querySelectorAll('.katex-html > *')) {
+  const r = b.getBoundingClientRect(), c = b.closest('.column')?.getBoundingClientRect();
+  const over = Math.max((r.right - sr.right) / k, c ? (r.right - c.right) / k : 0);
+  if (over > 2) console.log(Math.round(over), cur.querySelector('h2')?.innerText);
+}
+```
+
+⚠️ **KaTeX 0.18 uses new class names.** The box for one equation row is `.katex-base`, not
+`.base`. An equation number is `.katex-tag`, not `.tag`. A check with the old names finds
+nothing, and it reports every deck as clean. Before you trust a result of zero, run the check
+on an equation that you know is too wide.
+
+⚠️ **The `scrollWidth` of `.katex-display` does not show clipping.** Its overflow is `visible`.
+KaTeX spacing boxes and `\qquad` padding make `scrollWidth` larger than `clientWidth` on slides
+that look correct. For example, `B/06/c` "Partitioning the variation" reads +105 by this test.
+
+⚠️ **Use `aligned` for equations on slides, not `align`.** The `align` environment puts a
+number on each row. KaTeX puts these numbers at the right edge, on top of the equation. The
+slides do not refer to equations by number.
+
+A sweep of all 23 decks at 1920×1080 after these fixes found no equation past its slide or
+column. Two items go a small distance past the 1050px slide box. Both stay inside the reveal
+margin, so nothing is cut off. They are the right table on `A/03/b` "Tidying Example 3" (+29)
+and the top equation on `B/06/c` "Partitioning the variation" (+8).
+
 ## The lesson
 
 **Do not sync `styles.css` or `_quarto.yml` from data2 or psyc894.** Each course's slides are
