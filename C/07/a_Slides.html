@@ -6,9 +6,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c22d5dff81f50d6ca627b6188dc743b9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-99131190c761fa326849492283a1b6ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/quarto-contrib/lordicon-bundle-1.9.0/bundle.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="Jeffrey Girard">
   <title>Statistical Methods with R</title>
@@ -351,11 +351,11 @@
 <li><p>We refer to these differences as the model’s <span class="b pink">residuals</span></p></li>
 </ul>
 <p><span class="math display">
-\begin{align}
+\begin{aligned}
 \color{red}{\hat{y}_i} &amp;= \color{blue}{b_0} + \color{blue}{b_1}x_i\\
 y_i &amp;= \color{blue}{b_0} + \color{blue}{b_1}x_i + \color{magenta}{e_i} \\
 \color{magenta}{e_i} &amp;= y_i - \color{red}{\hat{y}_i}
-\end{align}
+\end{aligned}
 </span></p>
 </section>
 <section class="slide level2">
@@ -691,7 +691,7 @@ t_{obs} = \frac{b}{\text{SE}(b)}
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">model_parameters</span>(fit, <span class="at">standardize =</span> <span class="st">"refit"</span>)</span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="do">## Parameter   | Coefficient |   SE |         95% CI |     t(59) |      p</span></span>
 <span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a><span class="do">## ----------------------------------------------------------------------</span></span>
-<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) |   -3.99e-16 | 0.10 | [-0.20,  0.20] | -4.09e-15 | &gt; .999</span></span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) |   -4.10e-16 | 0.10 | [-0.20,  0.20] | -4.20e-15 | &gt; .999</span></span>
 <span id="cb11-7"><a aria-hidden="true" tabindex="-1"></a><span class="do">## hardness    |       -0.65 | 0.10 | [-0.85, -0.46] |     -6.66 | &lt; .001</span></span>
 <span id="cb11-8"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Standardize data then fit</span></span>
@@ -699,7 +699,7 @@ t_{obs} = \frac{b}{\text{SE}(b)}
 <span id="cb11-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">model_parameters</span>(fit2)</span>
 <span id="cb11-12"><a aria-hidden="true" tabindex="-1"></a><span class="do">## Parameter   | Coefficient |   SE |         95% CI |     t(59) |      p</span></span>
 <span id="cb11-13"><a aria-hidden="true" tabindex="-1"></a><span class="do">## ----------------------------------------------------------------------</span></span>
-<span id="cb11-14"><a aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) |   -3.99e-16 | 0.10 | [-0.20,  0.20] | -4.09e-15 | &gt; .999</span></span>
+<span id="cb11-14"><a aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) |   -4.10e-16 | 0.10 | [-0.20,  0.20] | -4.20e-15 | &gt; .999</span></span>
 <span id="cb11-15"><a aria-hidden="true" tabindex="-1"></a><span class="do">## hardness    |       -0.65 | 0.10 | [-0.85, -0.46] |     -6.66 | &lt; .001</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment fs70 tc">
@@ -1205,7 +1205,7 @@ R_{adj}^2 = 1 - \left(\frac{\text{SS}_{res}}{\text{SS}_{tot}} \times \frac{n - 1
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

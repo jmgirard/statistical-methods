@@ -6,9 +6,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c22d5dff81f50d6ca627b6188dc743b9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-99131190c761fa326849492283a1b6ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/quarto-contrib/lordicon-bundle-1.9.0/bundle.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="Jeffrey Girard">
   <title>Statistical Methods with R</title>
@@ -605,12 +605,12 @@ Male*
 <section class="slide level2 fs80">
 <h2>Estimating means by hand</h2>
 <p><span class="math display">
-\begin{align}
+\begin{aligned}
 \text{Model Equation: }&amp;\hat{y}=b_0 + b_1(C_1)\\
 &amp;\hat{y} = 4545.68 -683.41(C_1)\\ \\
 \text{Male penguins: }&amp;\hat{y} = 4545.68 -683.41(0)=4545.68 \\
 \text{Female penguins: }&amp;\hat{y} = 4545.68 -683.41(1)=3862.27
-\end{align}
+\end{aligned}
 </span></p>
 <div class="fragment">
 <ul>
@@ -956,16 +956,16 @@ Control*
 <li><p>Species explained 67% of the variance in body mass</p></li>
 </ul>
 </section>
-<section class="slide level2">
+<section class="slide level2 fs80">
 <h2>Estimating means by hand</h2>
 <p><span class="math display">
-\begin{align}
+\begin{aligned}
 \text{Equation: }&amp;\hat{y} = b_0 + b_1(C_1) + b_2(C_2) \\
   &amp;\hat{y} = 3700.66 + 32.43(C_1) + 1375.35(C_2) \\ \\
 \text{Adelie: }   &amp;\hat{y} = 3700.66 + 32.43(0) + 1375.35(0) = 3700.66 \\
 \text{Chinstrap: }&amp;\hat{y} = 3700.66 + 32.43(1) + 1375.35(0) = 3733.09 \\
 \text{Gentoo: }   &amp;\hat{y} = 3700.66 + 32.43(0) + 1375.35(1) = 5076.01
-\end{align}
+\end{aligned}
 </span></p>
 </section>
 <section class="slide level2">
@@ -1468,7 +1468,7 @@ Control*
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
