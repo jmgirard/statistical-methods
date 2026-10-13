@@ -156,6 +156,8 @@ Open Data/Materials, Preregistration, Disclosed Flexibility, Power Analysis
 ## Preregistration {.fs80}
 
 - Presenting exploratory work as confirmatory is misleading
+    + **Confirmatory:** testing a hypothesis fixed in advance
+    + **Exploratory:** looking for patterns to test later
 
 - We can avoid this by "calling our shots" before data collection
     + Preregistering our hypotheses makes HARKing visible

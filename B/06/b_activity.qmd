@@ -91,7 +91,7 @@ in their output to indicate that it came from a population with no differences i
 it. No reviewer could tell. The only thing that distinguishes their table from a
 real finding is information about how many comparisons were run -- which is
 exactly the information that goes missing in the literature, and exactly what
-preregistration exists to preserve.
+preregistration (Chapter 14) exists to preserve.
 
 Correcting for two preregistered comparisons rather than ten is legitimate, and
 it is legitimate *because you wrote them down first*.

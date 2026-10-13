@@ -306,7 +306,7 @@ qnorm(0.975)
 
 1. Our interval should cover the densest part of the sampling distribution
 
-1. 95% of the density of a normal distribution is within ~1.96 SD of the mean
+1. 95% of the density (area under the curve) of a normal distribution is within ~1.96 SD of the mean
 
 1. The SD of the sampling distribution is the standard error (SE) of the statistic
 
@@ -708,7 +708,7 @@ It is common to misinterpret what confidence intervals mean
 "There is a 95% probability that the population parameter value lies within the 95% CI."
 :::
 
-The above is incorrect because it does not align with the frequentist view of probability
+The above is incorrect because it does not align with the frequentist view of probability (probability as a long-run frequency over repeated samples)
 
 ::: {.footer}
 Bayesian interval estimates (credible intervals) actually can be interpreted this way

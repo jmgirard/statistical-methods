@@ -22,7 +22,7 @@ c) `score at T1 <- 3.2`
 d) `1_score <- 3.2`
 e) `ScoreAtTime1 <- 3.2`
 
-Make your best guesses just by looking at the commands and then check your guesses by running the commands in R. *Bonus:* Can you come up with a better name for this variable?
+Make your best guesses just by looking at the commands and then check your guesses by running the commands in R. *Bonus:* Can you come up with a better name for this object?
 
 {{< dstart summary="Answer Key" >}}
 
@@ -38,7 +38,7 @@ Make your best guesses just by looking at the commands and then check your guess
 
 ## Question 2
 
-a) Use the `sqrt()` function to calculate the square root of 3 and assign it to a variable called `y`. Print the value of `y` to the console.
+a) Use the `sqrt()` function to calculate the square root of 3 and assign it to an object called `y`. Print the value of `y` to the console.
 b) Use a function to round `y` to the nearest whole number.
 c) Use a function to round `y` to two decimal places.
 

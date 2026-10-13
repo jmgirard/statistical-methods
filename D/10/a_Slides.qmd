@@ -314,14 +314,7 @@ Error in $y$ will bias standardized (but not unstandardized) coefficients.
 
 Calculate predictors' **reliability** (the opposite of error)
 
-1. Test-retest reliability across time
-    + Correlation from `correlation::correlation()`
-
-2. Internal reliability across items
-    + McDonald's Omega from `psych::omega()`
-    
-3. Inter-rater reliability across raters
-    + Intraclass Correlation from `irr::icc()`
+- How to estimate reliability is covered in Chapter 13
 
 
 ## Solutions
@@ -330,7 +323,7 @@ Calculate predictors' **reliability** (the opposite of error)
     + e.g., add items, raters, or training
 
 2. Adjust coefficients for reliability
-    + e.g., correlation disattenuation
+    + e.g., correlation disattenuation (Chapter 13)
 
 3. Model reliability/error explicitly
     + e.g., total least squares estimation

@@ -84,10 +84,11 @@ set.seed(2021)
 {{< lif "../../icons/scatter.json" state=in-reveal colors=secondary:#2a76dd class=rc >}}
 :::
 
-## Assumptions Overview
+## Assumptions Overview {.fs80}
 
 - **Assumptions about the Formula**
     + Correct Functional Form
+    + No Omitted Confounders
     + Perfectly Measured Predictors
     + No Collinearity/Multicollinearity
 
@@ -244,7 +245,7 @@ see:::plot.see_check_model(check_model(fit_violated, check = "homogeneity", pane
     + e.g., Log or power transformations
 
 2. Adjust the standard errors
-    + e.g., Huber-White (sandwich) estimation
+    + e.g., Huber-White (sandwich) estimation (Chapter 11)
 
 2. Model the error variance explicitly
     + e.g., weighted least squares estimation
@@ -404,7 +405,7 @@ check_normality(fit_violated)
     + e.g., Yeo-Johnson transformations
 
 1. Use a nonparametric approach
-    + e.g., nonparametric bootstrapping
+    + e.g., nonparametric bootstrapping (Chapter 11)
     + e.g., rank-based nonparametrics
     
 2. Model the outcome as non-normal
@@ -490,7 +491,6 @@ p2 <- ggplot(d2b, aes(time, y_violated)) +
 
 1. If there is a potential clustering variable, do residuals differ?
     + Examine distribution of residuals in each cluster
-    + Calculate a multilevel intraclass correlation
     
 2. Is there autocorrelation between residuals?
     + Use the Durbin-Watson serial dependency test
@@ -640,7 +640,7 @@ $$b_0=`r round(cof2[[1]], 1)`^\ast, b_1= `r round(cof2[[2]], 1)`$$
 :::
 
 
-## Diagnostics
+## Diagnostics {.fs80}
 
 For each observation, we can calculate its...
 
@@ -653,8 +653,12 @@ For each observation, we can calculate its...
 3. **Influence:** How much does it change the coefficients?
     + e.g., $\text{DFFITS}_i$, $\text{DFBETAS}_i$, and Cook's $D_i$
 
+Influence needs both high leverage *and* large distance: a high-leverage case on the line moves nothing.
+
 
 ## Example: No Outliers
+
+The default cutoffs depend on the model. Here they are 0.701 for Cook's distance and 13.816 for Mahalanobis distance.
 
 ```{r}
 #| echo: true

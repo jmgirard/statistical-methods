@@ -167,6 +167,10 @@ see:::plot.see_check_model(check_model(fit, check = "linearity", panel = FALSE))
   )
 ```
 
+::: {.footer}
+A curve means the straight-line form misses a bend (more in Lecture 10a).
+:::
+
 ## Conclusions
 
 - Linear regression did not work well for predicting $y_2$
@@ -624,6 +628,7 @@ p6 <- tibble(x = seq(0, 10, 1), y = x^2) |>
     + Cubics can model opponent processes and regulation
     
 - Centering your $x$ variable is very helpful here
-    + Also see `poly()` for orthogonal polynomials
+    + Then $b_1$ is the curve's slope at the mean of $x$
+    + Also see `poly()` for orthogonal polynomials (optional)
 
 - Don't omit the lower degree terms/coefficients

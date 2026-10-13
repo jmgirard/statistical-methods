@@ -16,7 +16,7 @@ keys are included, so try each question yourself before opening them.*
 
 There are many ways to customize the RStudio interface. To explore the possibilities, go to **Tools** > **Global Options**. The most noticeable things you can change are aspects of RStudio's appearance. If you click on the *Appearance* section, you can select a different zoom level, editor font, font size, and editor theme. I usually teach with the default settings and you can keep everything the same if you want your computer to match the one I teach from, but for my own work I use the "Tomorrow Night 80s" theme and a custom font called [Fira Code](https://affcom.ku.edu/posts/firacode/). I also make slight changes to the *Pane Layout* section that I'd be happy to describe to you in class if you're interested.
 
-All of this stuff is optional, but a few changes that I'd recommend making are to go to the *General* section and make sure that "Restore .RData into workspace at startup" is unchecked and that "Save workspace to .RData on exit" is set to "Never". Finally, under the *Code* section and the Display tab, I like to check the box for "Allow scroll past end of document".
+All of this stuff is optional, but a few changes that I'd recommend making are to go to the *General* section and make sure that "Restore .RData into workspace at startup" is unchecked and that "Save workspace to .RData on exit" is set to "Never". This stops RStudio from saving your objects (the *workspace*) to an *.RData* file and loading them back, so each session starts clean. Finally, under the *Code* section and the Display tab, I like to check the box for "Allow scroll past end of document".
 
 ## Question 2 (Console)
 

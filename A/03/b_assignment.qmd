@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. Replace the header at the top of your new document with this one; `embed-resources: true` puts everything into the single HTML file you submit. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
 
 ```markdown
 ---
@@ -51,7 +51,7 @@ Read the "factbook.csv" file into R again for this question (remembering to trea
 
 a) Use `qplot()` to make a histogram of the `birth_rate` variable. Which values are the most common for this variable?
 
-b) Use `qplot()` to visualize the covariation of the `life_exp` and `net_migration_rate` variables. Do any points seem unusual on one or both variables?
+b) Use `qplot()` to visualize the covariation (how the two variables change together) of the `life_exp` and `net_migration_rate` variables. Do any points seem unusual on one or both variables?
 
 ---
 

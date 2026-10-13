@@ -175,6 +175,7 @@ Unit {{< meta unit >}} · Chapter {{< meta chapter >}} · Lecture {{< meta chapt
 
 ::: {.fragment .mt1}
 -   Save and [render]{.b .blue} the document and the answer appears in the output too
+    -   Clicking [Render]{.b .blue} runs all the code from scratch and writes an [.html]{.b .green} file next to the .qmd
 :::
 
 ::: {.fragment .mt1}

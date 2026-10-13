@@ -547,6 +547,7 @@ log(x)
 
 ::: {.takeaway}
 These return a vector as long as the input: one answer per element.
+`log()` is the natural logarithm, which shrinks large numbers more than small ones.
 :::
 
 ## Functions That Summarize

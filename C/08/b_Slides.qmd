@@ -668,7 +668,7 @@ plot(estimate_relation(fit6, by = c("duration", "sex", "program"))) + mytheme(20
 
 ::: {.fragment .mt1}
 - They are also easy to over-read
-    + A three-way term found post hoc is a HARKing risk
+    + A three-way term found post hoc is a HARKing risk (hypothesizing after the results are known; Chapter 14)
     + Prefer to predict them in advance and preregister
 :::
 

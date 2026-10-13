@@ -83,8 +83,8 @@ theme_set(mytheme)
     
 - But we can extend Welch's approach to ANOVA as well
     + This will let us relax this assumption
-    + The math is more complex than we have time for
-    + But I will show you how to implement it
+    + Unequal variances shrink the second (denominator) *df*
+    + The math is complex, but R does it for us
     
 ## Example dataset
 
@@ -220,6 +220,10 @@ F_{obs} = \frac{\text{MS}_b}{\text{MS}_e} \\
 F_{obs} \sim F(\textit{df}_1=g-1, \textit{df}_2 = (n-1)(g-1))
 $$
 
+::: {.footer}
+In R, `afex` corrects these *df* for sphericity (the differences between time points varying about equally), so they may not be whole numbers.
+:::
+
 ## Example data
 
 ```{r}
@@ -267,7 +271,7 @@ model_parameters(fit)
 :::
 
 ::: aside
-*Note.* `id` names the column identifying who each row came from. A factor goes in `within` when everyone is measured at every level, and in `between` when each person appears at only one.
+*Note.* `id` names the column that identifies each person. `within` is for factors measured on everyone at every level.
 :::
 
 ## Estimating means

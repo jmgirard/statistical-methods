@@ -295,7 +295,7 @@ p7b | p8b | p9b
 ```
 
 ::: {.footer}
-If the line-of-best-fit is horizontal, there is no linear relationship
+If the line-of-best-fit (Unit C) is horizontal, there is no linear relationship
 :::
 
 ## No linear / Nonlinear
@@ -471,7 +471,7 @@ r_xy
 
 ## Interpretation
 
-- $r=0$ is no *linear* relationship, $r=\pm1$ is a perfect linear relationship
+- $r=0$ is no *linear* relationship; $r=\pm1$ is a perfect one
 
 - How should we interpret correlations between $0$ and $\pm1$?
 
@@ -528,11 +528,11 @@ p1 | p2 | p3 | p4
 ```
 
 
-## Another effect size {.fs80}
+## An effect size (more in Lecture 06a) {.fs80}
 
 - We can square $r$ to get the [coefficient of determination]{.b .blue} $(r^2)$
 
-- How much variability is explained by the linear relationship?
+- How much variability is explained by the linear relationship (Unit C)?
 
 ::: {.columns}
 ::: {.column}
@@ -604,7 +604,7 @@ $$
 
 ## Test statistic
 
-- Test statistics incorporate the effect size and sample size
+- Test statistics incorporate the effect size ($r$) and sample size
 
 $$t_{obs}=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}$$
 

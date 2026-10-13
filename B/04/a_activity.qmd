@@ -30,8 +30,10 @@ Put your name on it and hand it to your partner.
 
 Working from your partner's paper alone:
 
-- Name the **target population** their question implies.
-- Name the **sampled population** their recruitment would actually produce.
+- Name the **target population** their question implies (who they want to draw
+  conclusions about).
+- Name the **sampled population** their recruitment would actually produce (who
+  could actually end up in the sample).
 - Name one specific way a parameter could differ between the two.
 - Decide whether a larger $n$ would close the gap you found, or leave it exactly
   where it is.

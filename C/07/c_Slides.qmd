@@ -291,7 +291,7 @@ $R^2$ represents (<span style="color:#1b9e77;font-weight:bold;">b</span> + <span
 :::
 
 ::: {.footer}
-A helpful picture, not an exact rule: a partial effect can occasionally be *larger* than its zero-order effect
+A helpful picture, not an exact rule: a partial effect can be *larger* than its zero-order effect, or even flip sign when the predictors are related
 :::
 
 ## Collinearity {.fs80}
@@ -557,6 +557,10 @@ plot(estimate_relation(fit3, by = c("flipper_len", "bill_len=[sd]"))) + mytheme(
 :::
 :::
 
+::: {.footer}
+The `=[sd]` shortcut shows the other predictor at its mean and at 1 SD above and below.
+:::
+
 # Many Predictors
 
 ::: {.section-art}
@@ -630,7 +634,7 @@ compare_performance(m_bil, m_fli, m_dep, m_sex, m_all,
 - In some fields, it is common to include many covariates
 
 - Relevant predictors should be included but don't go too far
-    + Adding predictors can *decrease your power*
+    + Adding predictors can *decrease your power* (fewer *df*)
     + Adding predictors can *lead to collinearity*
     + Adding predictors can *change your interpretation*
     

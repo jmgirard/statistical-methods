@@ -42,7 +42,7 @@ runner-up.
 
 ## 2. Write your rule (5 minutes)
 
-On a sheet the group signs, write a rule you would be willing to preregister:
+On a sheet the group signs, write a rule you would commit to in writing before seeing the results:
 
 - What counts as an outlier here? Name the statistic and the threshold, and say
   whether you accept a rule that flags nothing in this dataset.
@@ -96,8 +96,8 @@ with the same data and different, honestly-held rules produce different papers.
 The protection is not finding the one true threshold; it is fixing your rule
 before the reveal and reporting the analysis both ways.
 
-Note also what the two rules did. Cook's distance at its default threshold of
-0.8 reported nothing; Mahalanobis distance at *its* default flagged this case
+Note also what the two rules did. Cook's distance at its default threshold (0.8 for this
+model, printed on the "thresholds" line) reported nothing; Mahalanobis distance at *its* default flagged this case
 immediately. Neither is wrong -- they measure different things, influence
 versus unusualness in the predictors -- but a room that had run only the first
 one would have concluded there was nothing here to decide. A default is a

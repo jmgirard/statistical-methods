@@ -183,7 +183,7 @@ anything for text. What a function accepts follows from its purpose.
 -   [Factors]{.b .blue} represent categorical data
     -   Factors have multiple possible [levels]{.b .blue}
     -   Levels are [discrete]{.b .green} categories
-    -   Each case belongs to [exactly one]{.b .green}
+    -   Each observation belongs to [exactly one]{.b .green}
 
 ::: {.fragment .mt1}
 -   Sometimes levels are numeric "codes"
@@ -315,7 +315,7 @@ rarely the order you want in a table or a plot.
 ::: {.fragment .mt1}
 -   [Packages]{.b .blue} are like cookbooks for R
     -   *They contain helpful functions and datasets*
-    -   Browse an online **repository** for a package
+    -   Find packages in the main **repository**, CRAN
     -   **Install** it to add it to your personal **library**
     -   To use, **load** the package from the library
 :::
@@ -401,7 +401,7 @@ str_to_title(students)
 ::: {.takeaway}
 Installing puts the package on your [library]{.b .green} shelf; it is still not in
 this session until you take it down with `library()`. Install once per computer
-(and again after upgrading R); load **once per session**.
+(and again after upgrading R); load **once per session** (from starting R until you restart it).
 :::
 
 ## Keeping Packages Updated

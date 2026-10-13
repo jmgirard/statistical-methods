@@ -39,7 +39,8 @@ For each study below, answer:
 
 > I think people solve anagrams faster in a quiet room than in a noisy one. I
 > recruit 60 people, and each person solves one set of anagrams in a quiet room
-> and a different set in a noisy room, with the order counterbalanced. I record
+> and a different set in a noisy room, with the order counterbalanced (everyone does both rooms, but half start in the
+> quiet one). I record
 > solution time in seconds for each person in each condition.
 
 ## Example 3 (Organizational)

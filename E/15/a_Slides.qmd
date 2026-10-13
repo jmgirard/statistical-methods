@@ -55,7 +55,7 @@ theme_set(mytheme())
 ## Goals for each section {.fs80}
 
 ::: {.footer}
-This chapter focuses on section 3. The other three are a research-writing topic, not a statistical one.
+This chapter focuses on section 3 (the others are a writing topic). Interpretation belongs in the discussion, not the results.
 :::
 
 <table class="table-top">

@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. Replace the header at the top of your new document with this one; `embed-resources: true` puts everything into the single HTML file you submit. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -48,7 +48,7 @@ Read in the `fatalism` dataset again and fit the simple linear regression predic
 
 a) Report the $R^2$ of this model and the standardized slope. Explain in plain language what each one tells you.
 
-b) Calculate the correlation between `fatalism` and `depression`. Compare it to the standardized slope, and compare its square to the $R^2$. Explain why these relationships hold for a model with a single predictor, and say whether you would expect them to still hold if a second predictor were added.
+b) Calculate the correlation between `fatalism` and `depression`. Compare it to the standardized slope, and compare its square to the $R^2$. Explain why these relationships hold for a model with a single predictor.
 
 ---
 

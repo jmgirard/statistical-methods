@@ -620,7 +620,7 @@ $$
 
 ## Adjusted R-Squared
 
-- $R^2$ will never decrease when adding more predictors
+- $R^2$ never decreases as predictors are added (next lectures)
 
 - So we often adjust it to penalize adding more predictors
 

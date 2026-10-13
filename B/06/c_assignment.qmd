@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. Replace the header at the top of your new document with this one; `embed-resources: true` puts everything into the single HTML file you submit. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -30,7 +30,7 @@ Download and read in the [`exercise.csv`](../../data/exercise.csv){download="exe
 
 a) Compare the mean `expenditure` of the three programs twice: once using Student's approach (which assumes equal variances) and once using Welch's approach (which does not). Report the test statistic, degrees of freedom, and $p$-value for each.
 
-b) The two approaches give noticeably different denominator degrees of freedom here, even though the three groups are exactly the same size. The three groups' standard deviations are 7.45 (`jog`), 4.11 (`read`), and 8.92 (`swim`). Explain what is driving the difference in degrees of freedom. Which approach would you report, and why?
+b) The two approaches give noticeably different second degrees of freedom here, even though the three groups are exactly the same size. The three groups' standard deviations are 7.45 (`jog`), 4.11 (`read`), and 8.92 (`swim`). Explain what is driving the difference in degrees of freedom. Which approach would you report, and why?
 
 ## Question 2 (Repeated Measures)
 

@@ -490,8 +490,9 @@ guests
 ```
 
 ::: {.takeaway}
-Look at the `<chr>` and `<dbl>` labels: a tibble tracks each column's type, and
-prints `NA` where a value is missing rather than guessing at one.
+`<chr>` is character (text), `<dbl>` is double (a number), and `<fct>` is factor.
+A tibble tracks each column's type, and prints `NA` where a value is missing
+rather than guessing at one.
 :::
 
 ## Pitfall: Unequal Column Lengths
@@ -585,6 +586,7 @@ that assumes what is in it.
 ## Getting a Data File
 
 -   Download [`gradebook.csv`]{.b .blue} from the course website into your project folder
+    -   Put it in the same folder as your .qmd document: `read_csv()` looks for it there
 
 ::: {.fragment .mt1}
 -   You can see it in the [Extras pane > Files tab]{.b .green}
@@ -650,15 +652,15 @@ text rather than numbers.
 ::: {.fragment .mt1}
 -   Check your variables are the [correct type]{.b .green}
     -   Configure your [factors]{.b .green}' levels and labels
-    -   Establish ordinal factors' ordering
+    -   Set the order of a factor's levels
     -   Explicitly set your [missing values]{.b .green} to NA
 :::
 
 ::: {.fragment .mt1}
--   Check variables' [extrema]{.b .green} and [distributions]{.b .green}
+-   Check variables' [extrema]{.b .green} and [distributions]{.b .green} (how often each value occurs)
     -   Check for erroneous and outlying values
-    -   Check continuous variables' shapes
-    -   Check the overlap of categorical levels
+    -   Check [continuous]{.b .green} variables' shapes (any value in a range)
+    -   Check the overlap of [discrete]{.b .green} levels (separate categories or counts)
 :::
 
 ## Reading in the Raw Penguins Data
@@ -716,7 +718,7 @@ Those three columns now print as `<fct>` with readable values. Save the cleaned
 version with `write_csv()` so this is done **once**, not every session.
 :::
 
-## Checking the Summary for Problems
+## Checking the Summary for Problems {.fs80}
 
 ```{r}
 #| echo: true
@@ -725,8 +727,8 @@ summary(penguins)
 ```
 
 ::: {.takeaway}
-Read the `NA` counts: 2 penguins were never measured and 11 (including those 2)
-were never sexed. Real data has holes, and this is where you find them.
+Read the `NA` counts: 2 penguins were never measured and 11 were never sexed.
+`Median` is the middle value; half of the values fall between `1st Qu.` and `3rd Qu.`
 :::
 
 ## Describing One Continuous Variable
@@ -738,8 +740,8 @@ describe_distribution(penguins, body_mass)
 ```
 
 ::: {.takeaway}
-Mean, SD, range, and the count of missing values in one line: the numbers you
-would otherwise ask for one function at a time.
+For now, read `Mean`, `Range` (the minimum and maximum), and `n_Missing`. `SD`
+comes in Unit B, and you can skip the other columns.
 :::
 
 ## Describing All of Them at Once
@@ -847,6 +849,11 @@ qplot(x = island, data = penguins, geom = "bar")
 qplot(x = flipper_len, data = penguins, geom = "histogram")
 ```
 
+::: {.takeaway}
+Each bar covers a range of values (a bin), and its height is how many penguins
+fall in that range.
+:::
+
 ## The Same Variable as a Boxplot
 
 ```{r}
@@ -856,6 +863,11 @@ qplot(x = flipper_len, data = penguins, geom = "histogram")
 
 qplot(x = flipper_len, data = penguins, geom = "boxplot")
 ```
+
+::: {.takeaway}
+The middle line is the median, the box holds the middle half of the penguins, and
+any dots are unusual values.
+:::
 
 ## Body Mass as a Histogram
 
@@ -918,12 +930,3 @@ qplot(x = species, fill = island, data = penguins, geom = "bar")
 qplot(x = body_mass, y = species, data = penguins, geom = "boxplot")
 ```
 
-## The Same Pair as Violins
-
-```{r}
-#| echo: true
-#| fig-width: 7
-#| fig-height: 3.4
-
-qplot(x = body_mass, y = species, data = penguins, geom = "violin")
-```

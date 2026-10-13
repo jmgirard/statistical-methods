@@ -121,7 +121,7 @@ Blue = power, red = Type I error rate (α), line = decision criterion
 - [Sensitivity]{.b .blue}: determine minimum $\text{ES}$ given others
     + Useful when you are unsure of the effect size to expect
 - [Post-hoc]{.b .gray}: determine power $(1-\beta)$ given others
-    + Not very useful in practice (since your $\text{ES}$ is based on the data)
+    + Not useful: power from the observed $\text{ES}$ just restates the $p$-value
 - [Criterion]{.b .gray}: determine $\alpha$ given others
     + Not very useful in practice (since $\alpha$ is usually fixed anyway)
 

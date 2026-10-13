@@ -30,7 +30,8 @@ $p < .05$.
 
 > **C.** A new 4-item screening tool against a full clinical diagnosis.
 
-> **D.** Two administrations of the same questionnaire, one week apart.
+> **D.** Two administrations of the same questionnaire, one week apart. (A
+> questionnaire is usually expected to correlate .70 or more with itself on retest.)
 
 Your job is to argue that **yours is the most useful result in the room.** You do
 not get to pick.

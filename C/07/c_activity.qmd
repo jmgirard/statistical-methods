@@ -54,6 +54,10 @@ On a card, invent a case from **your own field**: name three real variables, say
 how they relate causally, and design it so that adding $x_2$ makes the effect of
 $x_1$ shrink to nothing.
 
+Two terms you will need: a **confounder** causes both $x_1$ and $y$, so you
+control for it. A **mediator** sits on the path from $x_1$ to $y$, so controlling
+for it removes part of the effect you want.
+
 Trade cards with another pair. Their job is to decide, from your story alone:
 
 - Is $x_2$ a **confounder**? Then the adjusted estimate is the honest one.

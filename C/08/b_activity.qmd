@@ -67,6 +67,5 @@ With three programs, each interaction coefficient compares one program's duratio
 slope to the *reference* program's; the comparison between the two non-reference
 programs is not in the table. So "the effect differed for joggers but not
 swimmers" is the wrong sentence -- neither coefficient is about a single group.
-For an overall test, use the omnibus $F$ for the interaction term.
 
 {{< dstop >}}

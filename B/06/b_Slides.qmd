@@ -415,7 +415,7 @@ model_parameters(fit)
 
 ## Estimating group means
 
-- We can also estimate the model-implied group means
+- We can also get the group means estimated from the ANOVA
 
 ```{r}
 #| echo: true
@@ -498,6 +498,7 @@ eta_squared(fit)
 ## Many ways to reject the null
 
 - Recall that our null hypothesis is that $\mu_1=\mu_2=\mu_3$
+    + The overall $F$ test of whether any group means differ is called the "omnibus" test
 
 ::: {.fs60}
 | Possibility | $\mu_1=\mu_2$ | $\mu_1=\mu_3$ | $\mu_2=\mu_3$ | Hypothesis  |

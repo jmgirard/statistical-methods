@@ -15,7 +15,7 @@ format:
 Every question so far has told you which model to fit. Research never does. This
 activity works the other direction: you are given a study in the words a
 researcher would use to describe it, and you have to translate it into a data
-frame, a formula, and a set of assumptions worth worrying about.
+frame, a formula, and anything in the design worth worrying about.
 
 Work through each one in a small group if you can. There is usually more than
 one defensible answer; being able to say *why* you chose yours is the skill
@@ -26,7 +26,8 @@ For each study below, answer:
 1. What might the data frame look like? Name the variables, give their types,
    and say what one row represents.
 2. What formula would you use to test the hypothesis with a linear model?
-3. Should you be worried about any of the linear model's assumptions here?
+3. Is there anything about the design that should make you hesitate before
+   trusting that model?
 
 ## Example 1 (Clinical / Health Psychology)
 

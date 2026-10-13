@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. Replace the header at the top of your new document with this one; `embed-resources: true` puts everything into the single HTML file you submit. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -36,15 +36,15 @@ b) Test my hypothesis from part (a) in R. Include your results table and write a
 
 ## Question 2 (Effect Sizes)
 
-Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `job_type`.
+Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA comparing `prestige` across `job_type`.
 
-a) Calculate a standardized effect size for this ANOVA (e.g., $\eta^2$) and report it with its confidence interval.
+a) Calculate a standardized effect size for this ANOVA (e.g., $\eta^2$).
 
 b) A significant $p$-value and a large effect size tell you different things. Explain what the effect size adds here that the $p$-value alone does not.
 
 ## Question 3 (Post-hoc Tests)
 
-Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `job_type`.
+Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA comparing `prestige` across `job_type`.
 
 a) Estimate the mean and 95% CI of each occupation type's prestige score. *Optional challenge: create a plot showing these means.*
 
