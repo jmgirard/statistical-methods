@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -44,7 +44,7 @@ b) Check the functional form assumption using the diagnostic(s) learned in lectu
 
 Read in the `screentime` dataset again for this question so that it can be answered on its own.
 
-a) Fit a model predicting `mental_wellbeing` from the four weekday screen-time variables (`watch_wd`, `play_wd`, `compute_wd`, `phone_wd`) plus `gender`, `minority`, and `deprived_area`. A reviewer is concerned that, because several predictors are all about "screen time," there may be multicollinearity. Check for this using the diagnostic(s) learned in lecture and interpret the results.
+a) Fit a model predicting `mental_wellbeing` from the four weekday screen-time variables (`watch_wd`, `play_wd`, `compute_wd`, `phone_wd`) plus `gender`, `minority`, and `deprived_area`. A reviewer is concerned that, because several predictors are all about "screen time," there may be multicollinearity. Check for this using the diagnostic(s) and cutoffs learned in lecture and interpret the results.
 
 b) Now fit a second model that adds the four weekend predictors (`watch_we`, `play_we`, `compute_we`, `phone_we`). Re-check for multicollinearity. Which predictors became problematic, and why would adding weekend versions of the same activities do that?
 

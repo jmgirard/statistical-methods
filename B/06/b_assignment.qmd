@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -24,19 +24,19 @@ embed-resources: true
 
 *Please clearly mark which part of your document is answering which question (e.g., using markdown headings) and remove any "scratch work" or failed attempts from your document before submitting it. Finally, note that many essay-style questions will require you to read between the lines and use your imagination (as opposed to just looking up the answer in the lecture).*
 
-*All three questions below use the [`prestige.csv`](../../data/prestige.csv){download="prestige.csv"} file, which records the average education, income, percentage of women, and Pineo-Porter prestige score of 98 Canadian occupations. Each question tells you to read it in, so they can be answered in any order.* **Be sure to set the `type` variable to a factor.**
+*All three questions below use the [`prestige.csv`](../../data/prestige.csv){download="prestige.csv"} file, which records the average education, income, percentage of women, and Pineo-Porter prestige score of 98 Canadian occupations. Each question tells you to read it in, so they can be answered in any order.* **Be sure to set the `job_type` variable to a factor.**
 
 ## Question 1 (One-way ANOVA in R)
 
-Read in `prestige.csv` and set `type` to a factor.
+Read in `prestige.csv` and set `job_type` to a factor.
 
-a) I want to test whether the three types of occupation (`type`, i.e., Blue Collar, White Collar, and Professional) have different mean `prestige` scores. What should my null and alternative hypotheses be? What are the two components of variation in this data (give the technical names and describe what they are verbally)?
+a) I want to test whether the three types of occupation (`job_type`, i.e., Blue Collar, White Collar, and Professional) have different mean `prestige` scores. What should my null and alternative hypotheses be? What are the two components of variation in this data (give the technical names and describe what they are verbally)?
 
 b) Test my hypothesis from part (a) in R. Include your results table and write a sentence (or several) that reports the results verbally. What can we conclude?
 
 ## Question 2 (Effect Sizes)
 
-Read in `prestige.csv` and set `type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `type`.
+Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `job_type`.
 
 a) Calculate a standardized effect size for this ANOVA (e.g., $\eta^2$) and report it with its confidence interval.
 
@@ -44,7 +44,7 @@ b) A significant $p$-value and a large effect size tell you different things. Ex
 
 ## Question 3 (Post-hoc Tests)
 
-Read in `prestige.csv` and set `type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `type`.
+Read in `prestige.csv` and set `job_type` to a factor, then fit the same one-way ANOVA predicting `prestige` from `job_type`.
 
 a) Estimate the mean and 95% CI of each occupation type's prestige score. *Optional challenge: create a plot showing these means.*
 

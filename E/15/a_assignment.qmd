@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -34,15 +34,15 @@ b) Pick one specific piece of information that authors frequently put in the wro
 
 Find a published research paper in your own area that used multiple regression, and evaluate it from the perspective of a methodological reviewer rather than as an ordinary reader. (Pick a paper you can access in full, including its tables.) Give the full citation, then answer the following.
 
-a) Report what you found in the **introduction**. Are the research question and hypotheses stated clearly, and stated *before* the results? Does the literature justify those specific predictions? Is the study framed as confirmatory or exploratory, and is that framing credible?
+a) Report what you found in the **introduction**. Are the hypotheses stated *before* the results? Is the study framed as confirmatory or exploratory, and does anything (such as a preregistration) make that framing credible? (See Lecture 14b.)
 
-b) Report what you found in the **methods**. Pay particular attention to whether the sample size is justified (e.g., a power analysis), whether the measures and procedures are described well enough to reproduce, and how the regression was specified: which predictors, why those, and how covariates, missing data, and outliers were handled.
+b) Report what you found in the **methods**. Is the sample size justified, for example by a power analysis (Lecture 14a)? Are the variables described clearly enough that you can tell what was measured? How was the regression specified: which predictors and covariates were included, and how were outliers handled (Lecture 10b)?
 
 ## Question 3 (Reviewing the Results and Discussion)
 
 Using the same paper you evaluated in Question 2, write a summary of what you found regarding the **results and discussion** sections.
 
-a) Report what you found, paying particular attention to whether the statistical claims are supported by the analyses actually conducted.
+a) Report what you found in the **results**, using the eight results-section questions from lecture as your checklist. Then say whether the claims in the **discussion** are supported by the analyses actually conducted.
 
 b) Include a few sentences about what you learned from reviewing a paper this way, and one thing you will do differently in your own writing as a result.
 

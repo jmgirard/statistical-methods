@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -42,7 +42,7 @@ Consider the following description of a study:
 
 > A researcher collects 30 outcome measures from 40 participants. None of the planned comparisons reach significance, so she examines all 30 outcomes and finds that 2 of them differ significantly between groups at $p<.05$. She writes up those 2 outcomes, frames the introduction around the theory they support, and reports that the study confirmed her hypothesis.
 
-a) Identify each questionable research practice in this description and name it. For each one, explain specifically what the researcher did that qualifies.
+a) This description contains three of the questionable research practices from lecture. Name each one, and explain specifically what the researcher did that qualifies.
 
 b) Rewrite the study plan so the same scientific question could be asked defensibly. Be concrete about what she should have decided in advance and what she should report.
 

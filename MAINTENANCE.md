@@ -719,7 +719,11 @@ chance of at least one, 3.6% surviving Holm.
 
 One trap inside the rule: `estimate_contrasts()` refuses a predictor named `group`
 (the marginaleffects package reserves the name), which is why B/06b's factor is called
-`condition`.
+`condition`. A column named `type` hits the same problem in a different way:
+`estimate_means(fit, by = "type")` prints the means with no group column, and `plot()`
+on the result fails. So `prestige.csv`'s `type` column is called `job_type`. Before you
+add a dataset, check its column names against the arguments of
+`marginaleffects::predictions()`.
 
 ### The audit, and what it found
 

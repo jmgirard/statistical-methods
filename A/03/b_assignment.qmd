@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
 
 ```markdown
 ---
@@ -26,12 +26,12 @@ embed-resources: true
 
 ## Question 1 (Data Frames)
 
-|planet |moons|has_rings|
+|planet |moons|kind     |
 |-------|-----|---------|
-|Earth  |1    |FALSE    |
-|Mars   |2    |FALSE    |
-|Jupiter|97   |TRUE     |
-|Saturn |274  |TRUE     |
+|Earth  |1    |rocky    |
+|Mars   |2    |rocky    |
+|Jupiter|97   |gas giant|
+|Saturn |274  |gas giant|
 
 a) Create three vectors from the columns of the table above and combine them into a tibble named `planets`. Print the tibble.
 
@@ -40,7 +40,7 @@ b) Look at the short type abbreviation printed under each column name. Report wh
 
 ## Question 2 (Data Files)
 
-a) Download the [`factbook.csv`](../../data/factbook.csv){download="factbook.csv"} file and read it into R as a tibble. Tell R that any cell containing an asterisk (`*`) is actually missing.
+a) Download the [`factbook.csv`](../../data/factbook.csv){download="factbook.csv"} file and read it into R as a tibble. When you read it in, tell R that any cell containing an asterisk (`*`) is actually missing.
 
 b) Use a function from the easystats package to describe the distribution of all continuous variables in this tibble. Which variables contain missing values, and what is the mean of the `maternal_mortality` variable?
 
@@ -49,7 +49,7 @@ b) Use a function from the easystats package to describe the distribution of all
 
 Read the "factbook.csv" file into R again for this question (remembering to treat asterisks as missing) so that it can be answered on its own.
 
-a) Use `qplot()` to plot the distribution/variation of the `birth_rate` variable. Which values are the most common for this variable?
+a) Use `qplot()` to make a histogram of the `birth_rate` variable. Which values are the most common for this variable?
 
 b) Use `qplot()` to visualize the covariation of the `life_exp` and `net_migration_rate` variables. Do any points seem unusual on one or both variables?
 

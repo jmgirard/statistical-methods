@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks. For questions that ask you to fix code, correct any errors (while achieving the stated goal) and include only the working code in your document.*
 
 ```markdown
 ---
@@ -43,7 +43,7 @@ b) Use a function in R to calculate the average number of characters across the 
 
 a) When would you want to convert a variable into a factor in R, and when would you not want to? What problems could be avoided, and what problems could be caused, by using factors?
 
-b) Download the [`water0.csv`](../../data/water0.csv){download="water0.csv"} file and load it into R. Then convert the `region` variable to a factor such that 1=North and 2=South. Finally, tabulate the `region` variable to count how many towns are in each region in this dataset.
+b) A study of drinking water recorded the region of 12 English towns, coded 1 for North and 2 for South: `2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 1`. Save these codes to a vector named `region`. Then convert `region` to a factor such that 1=North and 2=South. Finally, tabulate the factor to count how many towns are in each region.
 
 
 ## Question 3 (Packages)

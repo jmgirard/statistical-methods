@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -34,7 +34,7 @@ b) If I wanted to reduce my chances of making each type of error, what could I c
 
 Download and use the [`gpa.csv`](../../data/gpa.csv){download="gpa.csv"} data file for this question. It contains study habits and grade point averages for 55 college students.
 
-a) My friend is arguing that college students earn, on average, a 3.0 `gpa`. This doesn't sound right to me, so I want to approach this statistically. What should I use as my null hypothesis and what should I use as my alternative hypothesis?
+a) My friend is arguing that college students earn, on average, a 3.0 `gpa`. This doesn't sound right to me, but I have no idea whether the true average is higher or lower than 3.0, so I want to approach this statistically. What should I use as my null hypothesis and what should I use as my alternative hypothesis?
 
 b) Conduct a one-sample $t$-test of the null hypothesis from part (a). Report the $p$-value and your decision whether to retain or reject the null.
 

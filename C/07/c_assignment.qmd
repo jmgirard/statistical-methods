@@ -11,7 +11,7 @@ format:
 
 ## Instructions
 
-*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per question; if you answer involves running code, then use one or more code chunks.*
+*Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable `embed-resources` using the header below. If your answer involves writing text, then use markdown to write 2--4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.*
 
 ```markdown
 ---
@@ -24,21 +24,21 @@ embed-resources: true
 
 *Please clearly mark which part of your document is answering which question (e.g., using markdown headings) and remove any "scratch work" or failed attempts from your document before submitting it. Finally, note that many essay-style questions will require you to read between the lines and use your imagination (as opposed to just looking up the answer in the lecture).*
 
-*All three questions use the [`prestige.csv`](../../data/prestige.csv){download="prestige.csv"} dataset, which records the education, income, percentage of women, and Pineo-Porter `prestige` score of 98 Canadian occupations. Each question tells you to read it in and fit whatever models it needs, so they can be answered in any order.* **Be sure to set `type` to a factor.**
+*All three questions use the [`prestige.csv`](../../data/prestige.csv){download="prestige.csv"} dataset, which records the education, income, percentage of women, and Pineo-Porter `prestige` score of 98 Canadian occupations. Each question tells you to read it in and fit whatever models it needs, so they can be answered in any order.* **Be sure to set `job_type` to a factor, and leave its levels in R's default order so that Blue Collar is the reference group.**
 
 ## Question 1 (Multiple Regression)
 
-Read in `prestige.csv` and fit a multiple regression model that predicts the `prestige` variable from the categorical `type` variable while also controlling for the continuous `education` variable.
+Read in `prestige.csv` and fit a multiple regression model that predicts the `prestige` variable from the categorical `job_type` variable while also controlling for the continuous `education` variable.
 
 a) Interpret the unstandardized regression coefficients from this model (including the intercept). By interpret, I mean that you should report whether each is significant and also describe what the estimate tells us about the relationship between the variables.
 
-b) Use the `estimate_relation()` function from the {modelbased} package to plot this model's predictions, with `education` on the x-axis and `type` as the color scale.
+b) Plot this model's predictions with `plot(estimate_relation(model, by = c("education", "job_type")))`, replacing `model` with the name of your model. Naming two variables in `by` puts the first one on the x-axis and gives each level of the second one its own color. Describe what the plot shows.
 
 ## Question 2 (Shared Variance)
 
-Read in `prestige.csv` and fit **two** models: one regressing `prestige` on `type` alone, and one regressing `prestige` on both `type` and `education`.
+Read in `prestige.csv` and fit **two** models: one regressing `prestige` on `job_type` alone, and one regressing `prestige` on both `job_type` and `education`.
 
-a) The `type` coefficients differ between the two models; one of them even changes sign. Explain why. Which set are zero-order effects and which are partial effects, and how does that change how you would describe them?
+a) The `job_type` coefficients differ between the two models; one of them even changes sign. Explain why. Which set are zero-order effects and which are partial effects, and how does that change how you would describe them?
 
 b) Report the $R^2$ of both models. How much additional variance in `prestige` is explained by adding `education`, and what does that tell you about the two predictors?
 
