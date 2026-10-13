@@ -276,7 +276,7 @@ window.Quarto = {
 <p><strong>C.</strong> A new 4-item screening tool against a full clinical diagnosis.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p><strong>D.</strong> Two administrations of the same questionnaire, one week apart.</p>
+<p><strong>D.</strong> Two administrations of the same questionnaire, one week apart. (A questionnaire is usually expected to correlate .70 or more with itself on retest.)</p>
 </blockquote>
 <p>Your job is to argue that <strong>yours is the most useful result in the room.</strong> You do not get to pick.</p>
 </section>
@@ -374,7 +374,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

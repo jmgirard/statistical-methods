@@ -250,9 +250,10 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>I measured self-esteem with a three-item scale that turned out to have an alpha of .55. My predictor barely reached significance and the effect looks much smaller than the published literature suggests.</p>
 </blockquote>
+<p><em>Alpha is the scale’s reliability; .70 is the usual minimum.</em></p>
 </section>
-<section id="example-3" class="level2">
-<h2 class="anchored" data-anchor-id="example-3">Example 3</h2>
+<section id="example-3-a-preview-of-chapter-12" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-a-preview-of-chapter-12">Example 3 (a preview of Chapter 12)</h2>
 <blockquote class="blockquote">
 <p>About 18% of my participants skipped the income question. I dropped those rows so the model would run. My reviewer wants to know whether that was defensible, and I am not sure how to answer.</p>
 </blockquote>
@@ -262,6 +263,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>My outcome is badly skewed and I have 40 participants. A colleague says to log it, another says to run a nonparametric test, and a third says to bootstrap the confidence intervals. They cannot all be right.</p>
 </blockquote>
+<p><em>The nonparametric test and the bootstrap are previews of Chapter 11.</em></p>
 </section>
 <section id="example-5" class="level2">
 <h2 class="anchored" data-anchor-id="example-5">Example 5</h2>
@@ -350,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

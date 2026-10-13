@@ -920,7 +920,7 @@ China
 </div>
 </div>
 <div class="takeaway">
-<p>Look at the <code>&lt;chr&gt;</code> and <code>&lt;dbl&gt;</code> labels: a tibble tracks each column’s type, and prints <code>NA</code> where a value is missing rather than guessing at one.</p>
+<p><code>&lt;chr&gt;</code> is character (text), <code>&lt;dbl&gt;</code> is double (a number), and <code>&lt;fct&gt;</code> is factor. A tibble tracks each column’s type, and prints <code>NA</code> where a value is missing rather than guessing at one.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1027,7 +1027,10 @@ China
 <section class="slide level2">
 <h2>Getting a Data File</h2>
 <ul>
-<li>Download <span class="b blue"><code>gradebook.csv</code></span> from the course website into your project folder</li>
+<li>Download <span class="b blue"><code>gradebook.csv</code></span> from the course website into your project folder
+<ul>
+<li>Put it in the same folder as your .qmd document: <code>read_csv()</code> looks for it there</li>
+</ul></li>
 </ul>
 <div class="fragment mt1">
 <ul>
@@ -1107,18 +1110,18 @@ China
 <li>Check your variables are the <span class="b green">correct type</span>
 <ul>
 <li>Configure your <span class="b green">factors</span>’ levels and labels</li>
-<li>Establish ordinal factors’ ordering</li>
+<li>Set the order of a factor’s levels</li>
 <li>Explicitly set your <span class="b green">missing values</span> to NA</li>
 </ul></li>
 </ul>
 </div>
 <div class="fragment mt1">
 <ul>
-<li>Check variables’ <span class="b green">extrema</span> and <span class="b green">distributions</span>
+<li>Check variables’ <span class="b green">extrema</span> and <span class="b green">distributions</span> (how often each value occurs)
 <ul>
 <li>Check for erroneous and outlying values</li>
-<li>Check continuous variables’ shapes</li>
-<li>Check the overlap of categorical levels</li>
+<li>Check <span class="b green">continuous</span> variables’ shapes (any value in a range)</li>
+<li>Check the overlap of <span class="b green">discrete</span> levels (separate categories or counts)</li>
 </ul></li>
 </ul>
 </div>
@@ -1193,7 +1196,7 @@ China
 <p>Those three columns now print as <code>&lt;fct&gt;</code> with readable values. Save the cleaned version with <code>write_csv()</code> so this is done <strong>once</strong>, not every session.</p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 fs80">
 <h2>Checking the Summary for Problems</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1217,7 +1220,7 @@ China
 </div>
 </div>
 <div class="takeaway">
-<p>Read the <code>NA</code> counts: 2 penguins were never measured and 11 (including those 2) were never sexed. Real data has holes, and this is where you find them.</p>
+<p>Read the <code>NA</code> counts: 2 penguins were never measured and 11 were never sexed. <code>Median</code> is the middle value; half of the values fall between <code>1st Qu.</code> and <code>3rd Qu.</code></p>
 </div>
 </section>
 <section class="slide level2">
@@ -1235,7 +1238,7 @@ body_mass |    -0.72 | 342 |         2</code></pre>
 </div>
 </div>
 <div class="takeaway">
-<p>Mean, SD, range, and the count of missing values in one line: the numbers you would otherwise ask for one function at a time.</p>
+<p>For now, read <code>Mean</code>, <code>Range</code> (the minimum and maximum), and <code>n_Missing</code>. <code>SD</code> comes in Unit B, and you can skip the other columns.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1385,14 +1388,20 @@ male   | 168 | 48.84 |   50.45 |       100.00
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> flipper_len, <span class="at">data =</span> penguins, <span class="at">geom =</span> <span class="st">"histogram"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-22-1.png" width="672" class="r-stretch"></section>
+<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-22-1.png" width="672" class="r-stretch"><div class="takeaway">
+<p>Each bar covers a range of values (a bin), and its height is how many penguins fall in that range.</p>
+</div>
+</section>
 <section class="slide level2">
 <h2>The Same Variable as a Boxplot</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> flipper_len, <span class="at">data =</span> penguins, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-23-1.png" width="672" class="r-stretch"></section>
+<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-23-1.png" width="672" class="r-stretch"><div class="takeaway">
+<p>The middle line is the median, the box holds the middle half of the penguins, and any dots are unusual values.</p>
+</div>
+</section>
 <section class="slide level2">
 <h2>Body Mass as a Histogram</h2>
 <div class="cell">
@@ -1434,16 +1443,9 @@ male   | 168 | 48.84 |   50.45 |       100.00
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> body_mass, <span class="at">y =</span> species, <span class="at">data =</span> penguins, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-29-1.png" width="672" class="r-stretch"></section>
-<section class="slide level2">
-<h2>The Same Pair as Violins</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> body_mass, <span class="at">y =</span> species, <span class="at">data =</span> penguins, <span class="at">geom =</span> <span class="st">"violin"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
 
 
-<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-30-1.png" width="672" class="r-stretch"></section></section>
+<img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-29-1.png" width="672" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -1897,7 +1899,7 @@ male   | 168 | 48.84 |   50.45 |       100.00
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

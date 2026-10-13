@@ -271,8 +271,8 @@
 <li>But we can extend Welch’s approach to ANOVA as well
 <ul>
 <li>This will let us relax this assumption</li>
-<li>The math is more complex than we have time for</li>
-<li>But I will show you how to implement it</li>
+<li>Unequal variances shrink the second (denominator) <em>df</em></li>
+<li>The math is complex, but R does it for us</li>
 </ul></li>
 </ul>
 </section>
@@ -405,6 +405,9 @@ flowchart LR
 F_{obs} = \frac{\text{MS}_b}{\text{MS}_e} \\
 F_{obs} \sim F(\textit{df}_1=g-1, \textit{df}_2 = (n-1)(g-1))
 </span></p>
+<div class="footer">
+<p>In R, <code>afex</code> corrects these <em>df</em> for sphericity (the differences between time points varying about equally), so they may not be whole numbers.</p>
+</div>
 </section>
 <section class="slide level2">
 <h2>Example data</h2>
@@ -458,7 +461,7 @@ F_{obs} \sim F(\textit{df}_1=g-1, \textit{df}_2 = (n-1)(g-1))
 </div>
 
 <aside><div>
-<p><em>Note.</em> <code>id</code> names the column identifying who each row came from. A factor goes in <code>within</code> when everyone is measured at every level, and in <code>between</code> when each person appears at only one.</p>
+<p><em>Note.</em> <code>id</code> names the column that identifies each person. <code>within</code> is for factors measured on everyone at every level.</p>
 </div></aside></section>
 <section class="slide level2">
 <h2>Estimating means</h2>
@@ -1041,7 +1044,7 @@ F_{obs} \sim F(\textit{df}_1=g-1, \textit{df}_2 = (n-1)(g-1))
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

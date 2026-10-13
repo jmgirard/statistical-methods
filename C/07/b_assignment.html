@@ -297,7 +297,7 @@ window.Quarto = {
 <p><img src="../../img/exams_2780E3.svg" class="page-art img-fluid"></p>
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<p><em>Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable <code>embed-resources</code> using the header below. If your answer involves writing text, then use markdown to write 2–4 sentences per question; if you answer involves running code, then use one or more code chunks.</em></p>
+<p><em>Create a new Quarto document (HTML format), clear out the boilerplate code/text, and use this document to store your answers to each of the three questions below. Be sure to enable <code>embed-resources</code> using the header below. Replace the header at the top of your new document with this one; <code>embed-resources: true</code> puts everything into the single HTML file you submit. If your answer involves writing text, then use markdown to write 2–4 sentences per part, or more if a part asks several things or names its own length; if your answer involves running code, then use one or more code chunks.</em></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lecture 07b Assignment"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Your Name"</span></span>
@@ -317,13 +317,13 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="question-2-nominal-predictor">Question 2 (Nominal Predictor)</h2>
 <p>Read in the <a href="../../data/prestige.csv" download="prestige.csv"><code>prestige.csv</code></a> dataset, which records the education, income, percentage of women, and Pineo-Porter <code>prestige</code> score of 98 Canadian occupations.</p>
 <ol type="a">
-<li><p>Imagine that you want to use dummy coding to regress the <code>prestige</code> variable on the categorical <code>type</code> variable (Blue Collar, White Collar, Professional). Select a reference group for the <code>type</code> variable and briefly justify your choice (i.e., explain why you selected that group).</p></li>
-<li><p>Run the regression model described in part (a) in R using the factor shortcut (so <em>no need</em> to calculate the dummy codes by hand using <code>recode()</code>). Be sure to tell R to use the reference group you selected. <em>Optional challenge: Conduct an <span class="math inline">\(F\)</span> test on the results of your linear model to see if the overall effect of the <code>type</code> variable is significant.</em></p></li>
+<li><p>Imagine that you want to use dummy coding to regress the <code>prestige</code> variable on the categorical <code>job_type</code> variable (Blue Collar, White Collar, Professional). Select a reference group for the <code>job_type</code> variable and briefly justify your choice (i.e., explain why you selected that group).</p></li>
+<li><p>Run the regression model described in part (a) in R using the factor shortcut (so <em>no need</em> to calculate the dummy codes by hand using <code>recode()</code>). Be sure to tell R to use the reference group you selected. <em>Optional challenge: Conduct an <span class="math inline">\(F\)</span> test on the results of your linear model to see if the overall effect of the <code>job_type</code> variable is significant.</em></p></li>
 </ol>
 </section>
 <section id="question-3-interpreting-dummy-codes" class="level2">
 <h2 class="anchored" data-anchor-id="question-3-interpreting-dummy-codes">Question 3 (Interpreting Dummy Codes)</h2>
-<p>Read in the <code>prestige.csv</code> dataset again for this question, and regress <code>prestige</code> on the categorical <code>type</code> variable using <code>"Professional"</code> as the reference group.</p>
+<p>Read in the <code>prestige.csv</code> dataset again for this question, and regress <code>prestige</code> on the categorical <code>job_type</code> variable using <code>"Professional"</code> as the reference group.</p>
 <ol type="a">
 <li><p>Report the estimated value of each regression coefficient and explain what it means (e.g., this coefficient is the mean of X or the difference between X and Y). Include the intercept, as that is also a regression coefficient.</p></li>
 <li><p>Calculate the standardized coefficients for this model. How are they different from your answers to part (a), and why does standardizing leave the dummy codes themselves untouched?</p></li>
@@ -408,7 +408,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

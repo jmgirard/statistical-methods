@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>1_score &lt;- 3.2</code></li>
 <li><code>ScoreAtTime1 &lt;- 3.2</code></li>
 </ol>
-<p>Make your best guesses just by looking at the commands and then check your guesses by running the commands in R. <em>Bonus:</em> Can you come up with a better name for this variable?</p>
+<p>Make your best guesses just by looking at the commands and then check your guesses by running the commands in R. <em>Bonus:</em> Can you come up with a better name for this object?</p>
 <p></p><p></p><details><summary>Answer Key</summary><blockquote class="blockquote"><p></p>
 <table class="caption-top table">
 <thead>
@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
 <ol type="a">
-<li>Use the <code>sqrt()</code> function to calculate the square root of 3 and assign it to a variable called <code>y</code>. Print the value of <code>y</code> to the console.</li>
+<li>Use the <code>sqrt()</code> function to calculate the square root of 3 and assign it to an object called <code>y</code>. Print the value of <code>y</code> to the console.</li>
 <li>Use a function to round <code>y</code> to the nearest whole number.</li>
 <li>Use a function to round <code>y</code> to two decimal places.</li>
 </ol>
@@ -457,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

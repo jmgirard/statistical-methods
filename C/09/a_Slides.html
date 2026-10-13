@@ -299,7 +299,10 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(fit, <span class="at">check =</span> <span class="st">"linearity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
-<img data-src="a_Slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="a_Slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><div class="footer">
+<p>A curve means the straight-line form misses a bend (more in Lecture 10a).</p>
+</div>
+</section>
 <section class="slide level2">
 <h2>Conclusions</h2>
 <ul>
@@ -610,7 +613,8 @@
 </ul></li>
 <li>Centering your <span class="math inline">x</span> variable is very helpful here
 <ul>
-<li>Also see <code>poly()</code> for orthogonal polynomials</li>
+<li>Then <span class="math inline">b_1</span> is the curve’s slope at the mean of <span class="math inline">x</span></li>
+<li>Also see <code>poly()</code> for orthogonal polynomials (optional)</li>
 </ul></li>
 <li>Don’t omit the lower degree terms/coefficients</li>
 </ul>
@@ -1070,7 +1074,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

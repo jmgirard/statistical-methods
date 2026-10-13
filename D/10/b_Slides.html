@@ -259,12 +259,13 @@
 <p><lord-icon src="../../icons/scatter.json" colors="secondary:#2a76dd" state="in-reveal" class="rc"></lord-icon></p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 fs80">
 <h2>Assumptions Overview</h2>
 <ul>
 <li><strong>Assumptions about the Formula</strong>
 <ul>
 <li>Correct Functional Form</li>
+<li>No Omitted Confounders</li>
 <li>Perfectly Measured Predictors</li>
 <li>No Collinearity/Multicollinearity</li>
 </ul></li>
@@ -415,7 +416,7 @@
 </ul></li>
 <li>Adjust the standard errors
 <ul>
-<li>e.g., Huber-White (sandwich) estimation</li>
+<li>e.g., Huber-White (sandwich) estimation (Chapter 11)</li>
 </ul></li>
 <li>Model the error variance explicitly
 <ul>
@@ -533,7 +534,7 @@
 </ul></li>
 <li>Use a nonparametric approach
 <ul>
-<li>e.g., nonparametric bootstrapping</li>
+<li>e.g., nonparametric bootstrapping (Chapter 11)</li>
 <li>e.g., rank-based nonparametrics</li>
 </ul></li>
 <li>Model the outcome as non-normal
@@ -593,7 +594,6 @@
 <li>If there is a potential clustering variable, do residuals differ?
 <ul>
 <li>Examine distribution of residuals in each cluster</li>
-<li>Calculate a multilevel intraclass correlation</li>
 </ul></li>
 <li>Is there autocorrelation between residuals?
 <ul>
@@ -709,7 +709,7 @@
 <p><span class="math display">b_0=15.5^\ast, b_1= 0.3</span></p>
 </div></div>
 </section>
-<section class="slide level2">
+<section class="slide level2 fs80">
 <h2>Diagnostics</h2>
 <p>For each observation, we can calculate its…</p>
 <ol type="1">
@@ -726,9 +726,11 @@
 <li>e.g., <span class="math inline">\text{DFFITS}_i</span>, <span class="math inline">\text{DFBETAS}_i</span>, and Cook’s <span class="math inline">D_i</span></li>
 </ul></li>
 </ol>
+<p>Influence needs both high leverage <em>and</em> large distance: a high-leverage case on the line moves nothing.</p>
 </section>
 <section class="slide level2">
 <h2>Example: No Outliers</h2>
+<p>The default cutoffs depend on the model. Here they are 0.701 for Cook’s distance and 13.816 for Mahalanobis distance.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">check_outliers</span>(fit_without, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"cook"</span>, <span class="st">"mahalanobis"</span>))</span>
 <span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="do">## OK: No outliers detected.</span></span>
@@ -788,8 +790,8 @@
 <span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Identify outliers</span></span>
 <span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a>outliers <span class="ot">&lt;-</span> <span class="fu">check_outliers</span>(fit_with, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"cook"</span>, <span class="st">"mahalanobis"</span>))</span>
 <span id="cb15-7"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Remove outliers</span></span>
-<span id="cb15-9"><a aria-hidden="true" tabindex="-1"></a>dat_drop <span class="ot">&lt;-</span> dat_with[<span class="sc">!</span><span class="fu">as.numeric</span>(outliers), ]</span>
+<span id="cb15-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Remove outliers (keep only the cases it did not flag)</span></span>
+<span id="cb15-9"><a aria-hidden="true" tabindex="-1"></a>dat_drop <span class="ot">&lt;-</span> dat_with[<span class="sc">!</span><span class="fu">as.logical</span>(outliers), ]</span>
 <span id="cb15-10"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-11"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Number of observations after removing outliers</span></span>
 <span id="cb15-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(dat_drop)</span>
@@ -1251,7 +1253,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

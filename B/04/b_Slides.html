@@ -398,7 +398,7 @@
 <h2>Putting it all together</h2>
 <ol type="1">
 <li><p>Our interval should cover the densest part of the sampling distribution</p></li>
-<li><p>95% of the density of a normal distribution is within ~1.96 SD of the mean</p></li>
+<li><p>95% of the density (area under the curve) of a normal distribution is within ~1.96 SD of the mean</p></li>
 <li><p>The SD of the sampling distribution is the standard error (SE) of the statistic</p></li>
 <li><p>So, if we assume the sampling distribution is normally distributed, then…</p></li>
 <li><p>Our interval estimate is the sample statistic plus/minus 1.96 * SE</p></li>
@@ -709,7 +709,7 @@
 </div>
 </div>
 </div>
-<p>The above is incorrect because it does not align with the frequentist view of probability</p>
+<p>The above is incorrect because it does not align with the frequentist view of probability (probability as a long-run frequency over repeated samples)</p>
 <div class="footer">
 <p>Bayesian interval estimates (credible intervals) actually can be interpreted this way</p>
 </div>
@@ -1237,7 +1237,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

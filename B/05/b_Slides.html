@@ -319,7 +319,7 @@
 <h2>No linear / Nonlinear</h2>
 
 <img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><div class="footer">
-<p>If the line-of-best-fit is horizontal, there is no linear relationship</p>
+<p>If the line-of-best-fit (Unit C) is horizontal, there is no linear relationship</p>
 </div>
 </section>
 <section class="slide level2">
@@ -455,7 +455,7 @@
 <section class="slide level2">
 <h2>Interpretation</h2>
 <ul>
-<li><p><span class="math inline">r=0</span> is no relationship, <span class="math inline">r=\pm1</span> is a perfect relationship</p></li>
+<li><p><span class="math inline">r=0</span> is no <em>linear</em> relationship; <span class="math inline">r=\pm1</span> is a perfect one</p></li>
 <li><p>How should we interpret correlations between <span class="math inline">0</span> and <span class="math inline">\pm1</span>?</p></li>
 <li><p>It depends on the context (what is common in your field?)</p></li>
 <li><p>But here are some heuristics to use as a starting place</p></li>
@@ -491,10 +491,10 @@
 
 <img data-src="b_Slides_files/figure-revealjs/unnamed-chunk-15-1.png" width="1440" class="r-stretch"></section>
 <section class="slide level2 fs80">
-<h2>Another effect size</h2>
+<h2>An effect size (more in Lecture 06a)</h2>
 <ul>
 <li><p>We can square <span class="math inline">r</span> to get the <span class="b blue">coefficient of determination</span> <span class="math inline">(r^2)</span></p></li>
-<li><p>How much variability is explained by the linear relationship?</p></li>
+<li><p>How much variability is explained by the linear relationship (Unit C)?</p></li>
 </ul>
 <div class="columns">
 <div class="column">
@@ -597,7 +597,7 @@ H_1: \rho\neq0
 <section class="slide level2">
 <h2>Test statistic</h2>
 <ul>
-<li>Test statistics incorporate the effect size and sample size</li>
+<li>Test statistics incorporate the effect size (<span class="math inline">r</span>) and sample size</li>
 </ul>
 <p><span class="math display">t_{obs}=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}</span></p>
 <ul>
@@ -1231,7 +1231,7 @@ H_1: \rho\neq0
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

@@ -232,13 +232,13 @@ ul.task-list li input[type="checkbox"] {
 
 <p><img src="../../img/conversation_2780E3.svg" class="page-art img-fluid"></p>
 <p><em>These activities are for practice only; there is nothing to turn in.</em></p>
-<p>Every question so far has told you which model to fit. Research never does. This activity works the other direction: you are given a study in the words a researcher would use to describe it, and you have to translate it into a data frame, a formula, and a set of assumptions worth worrying about.</p>
+<p>Every question so far has told you which model to fit. Research never does. This activity works the other direction: you are given a study in the words a researcher would use to describe it, and you have to translate it into a data frame, a formula, and anything in the design worth worrying about.</p>
 <p>Work through each one in a small group if you can. There is usually more than one defensible answer; being able to say <em>why</em> you chose yours is the skill being practiced.</p>
 <p>For each study below, answer:</p>
 <ol type="1">
 <li>What might the data frame look like? Name the variables, give their types, and say what one row represents.</li>
 <li>What formula would you use to test the hypothesis with a linear model?</li>
-<li>Should you be worried about any of the linear model’s assumptions here?</li>
+<li>Is there anything about the design that should make you hesitate before trusting that model?</li>
 </ol>
 <section id="example-1-clinical-health-psychology" class="level2">
 <h2 class="anchored" data-anchor-id="example-1-clinical-health-psychology">Example 1 (Clinical / Health Psychology)</h2>
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

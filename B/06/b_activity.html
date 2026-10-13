@@ -342,7 +342,7 @@ window.Quarto = {
 <p><em>If you have more time: you have 5 groups but only ever cared about two specific comparisons, written down before collecting data. How many tests should you correct for, and why is the answer not always ten?</em></p>
 <p></p><p></p><details><summary>If you were not in class</summary><blockquote class="blockquote"><p></p>
 <p>Ten tests at <span class="math inline">\(\alpha = .05\)</span> give you an expected 0.5 false positives per replication and roughly a 40% chance of at least one – a bit lower here, near a quarter to a third, because the pairwise tests share groups and are not independent. The omnibus test comes out significant almost exactly 5% of the time, because it is one test with one <span class="math inline">\(\alpha\)</span>. After Holm, the pairwise results drop back to 5% or a little under – the adjustment is deliberately conservative. That is what it is for, and the board shows all three at once.</p>
-<p>The last question is the one worth the time. The student with the most striking result has an ordinary-looking table, a small <span class="math inline">\(p\)</span>-value, and nothing whatsoever in their output to indicate that it came from a population with no differences in it. No reviewer could tell. The only thing that distinguishes their table from a real finding is information about how many comparisons were run – which is exactly the information that goes missing in the literature, and exactly what preregistration exists to preserve.</p>
+<p>The last question is the one worth the time. The student with the most striking result has an ordinary-looking table, a small <span class="math inline">\(p\)</span>-value, and nothing whatsoever in their output to indicate that it came from a population with no differences in it. No reviewer could tell. The only thing that distinguishes their table from a real finding is information about how many comparisons were run – which is exactly the information that goes missing in the literature, and exactly what preregistration (Chapter 14) exists to preserve.</p>
 <p>Correcting for two preregistered comparisons rather than ten is legitimate, and it is legitimate <em>because you wrote them down first</em>.</p>
 <p></p></blockquote></details><p></p><p></p>
 
@@ -423,7 +423,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

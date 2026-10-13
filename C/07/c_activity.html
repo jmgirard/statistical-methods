@@ -324,6 +324,7 @@ window.Quarto = {
 <section id="build-one-and-trade-it-6-minutes" class="level2">
 <h2 class="anchored" data-anchor-id="build-one-and-trade-it-6-minutes">3. Build one and trade it (6 minutes)</h2>
 <p>On a card, invent a case from <strong>your own field</strong>: name three real variables, say how they relate causally, and design it so that adding <span class="math inline">\(x_2\)</span> makes the effect of <span class="math inline">\(x_1\)</span> shrink to nothing.</p>
+<p>Two terms you will need: a <strong>confounder</strong> causes both <span class="math inline">\(x_1\)</span> and <span class="math inline">\(y\)</span>, so you control for it. A <strong>mediator</strong> sits on the path from <span class="math inline">\(x_1\)</span> to <span class="math inline">\(y\)</span>, so controlling for it removes part of the effect you want.</p>
 <p>Trade cards with another pair. Their job is to decide, from your story alone:</p>
 <ul>
 <li>Is <span class="math inline">\(x_2\)</span> a <strong>confounder</strong>? Then the adjusted estimate is the honest one.</li>
@@ -413,7 +414,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

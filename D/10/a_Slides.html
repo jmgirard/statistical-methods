@@ -528,20 +528,9 @@
 <section class="slide level2">
 <h2>Diagnostics</h2>
 <p>Calculate predictors’ <strong>reliability</strong> (the opposite of error)</p>
-<ol type="1">
-<li>Test-retest reliability across time
 <ul>
-<li>Correlation from <code>correlation::correlation()</code></li>
-</ul></li>
-<li>Internal reliability across items
-<ul>
-<li>McDonald’s Omega from <code>psych::omega()</code></li>
-</ul></li>
-<li>Inter-rater reliability across raters
-<ul>
-<li>Intraclass Correlation from <code>irr::icc()</code></li>
-</ul></li>
-</ol>
+<li>How to estimate reliability is covered in Chapter 13</li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>Solutions</h2>
@@ -552,7 +541,7 @@
 </ul></li>
 <li>Adjust coefficients for reliability
 <ul>
-<li>e.g., correlation disattenuation</li>
+<li>e.g., correlation disattenuation (Chapter 13)</li>
 </ul></li>
 <li>Model reliability/error explicitly
 <ul>
@@ -1312,7 +1301,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

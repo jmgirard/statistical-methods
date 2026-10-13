@@ -284,7 +284,7 @@ window.Quarto = {
 <p></p><p></p><details><summary>If you were not in class</summary><blockquote class="blockquote"><p></p>
 <p>The pattern asked for in part 2 – <code>duration</code> near zero while duration clearly matters – is one flat line for females and a rising line for males. The <code>duration</code> coefficient is the slope <strong>for the reference group only</strong>, so a zero there means “duration does not matter for females,” not “duration does not matter.” That single misreading is behind a large share of misinterpreted interaction tables, and it is much easier to catch when you have just failed to describe the plot to somebody.</p>
 <p>Two parallel lines with a constant gap is the other one worth fixing in memory: that is <code>duration</code> positive, <code>sexmale</code> positive, interaction <strong>zero</strong>. A constant difference is exactly what <em>no</em> interaction looks like.</p>
-<p>With three programs, each interaction coefficient compares one program’s duration slope to the <em>reference</em> program’s; the comparison between the two non-reference programs is not in the table. So “the effect differed for joggers but not swimmers” is the wrong sentence – neither coefficient is about a single group. For an overall test, use the omnibus <span class="math inline">\(F\)</span> for the interaction term.</p>
+<p>With three programs, each interaction coefficient compares one program’s duration slope to the <em>reference</em> program’s; the comparison between the two non-reference programs is not in the table. So “the effect differed for joggers but not swimmers” is the wrong sentence – neither coefficient is about a single group.</p>
 <p></p></blockquote></details><p></p><p></p>
 
 
@@ -364,7 +364,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stats\.jmgirard\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
