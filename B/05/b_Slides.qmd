@@ -471,7 +471,7 @@ r_xy
 
 ## Interpretation
 
-- $r=0$ is no relationship, $r=\pm1$ is a perfect relationship
+- $r=0$ is no *linear* relationship, $r=\pm1$ is a perfect linear relationship
 
 - How should we interpret correlations between $0$ and $\pm1$?
 

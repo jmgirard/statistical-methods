@@ -440,7 +440,7 @@ n <- 100
 d <- tibble(
   x1 = rnorm(n, 10, 5),
   x2 = rnorm(n, 0, 1),
-  y = 0 + 0.1*x1 - 5*x2 + .2*x1*x2 + rnorm(n,0,2) 
+  y = 10 + 1.1 * x1 + 8 * x2 - 0.3*x1*x2 + rnorm(n,0,6) 
 )
 fit0 <- lm(y ~ x1 * x2, d)
 plot(estimate_relation(fit0, by = c("x1", "x2=c(-1,0,1)"))) +
@@ -460,7 +460,7 @@ n <- 100
 d <- tibble(
   x1 = rnorm(n, 10, 5),
   x2 = rnorm(n, 0, 1),
-  y = 0 + .1*x1 - .01*x2 - .025*x1*x2 + rnorm(n,0,2) 
+  y = 10 + 1.1 * x1 + 8 * x2 - 0.8*x1*x2 + rnorm(n,0,6) 
 )
 fit0 <- lm(y ~ x1 * x2, d)
 plot(estimate_relation(fit0, by = c("x1", "x2=c(-1,0,1)"))) +

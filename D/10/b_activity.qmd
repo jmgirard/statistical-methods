@@ -65,7 +65,7 @@ outliers <- check_outliers(fit, method = "mahalanobis")
 outliers      # this rule does flag something
 yp[24, ]      # who is it?
 
-yp_drop <- yp[!as.numeric(outliers), ]   # remove it, exactly as in the slides
+yp_drop <- yp[!as.logical(outliers), ]   # remove it, exactly as in the slides
 fit_drop <- lm(n_cites ~ n_pubs + yrs_since, data = yp_drop)
 compare_parameters(fit, fit_drop)
 ```

@@ -702,8 +702,8 @@ nrow(dat_with)
 # Identify outliers
 outliers <- check_outliers(fit_with, method = c("cook", "mahalanobis"))
 
-# Remove outliers
-dat_drop <- dat_with[!as.numeric(outliers), ]
+# Remove outliers (keep only the cases it did not flag)
+dat_drop <- dat_with[!as.logical(outliers), ]
 
 # Number of observations after removing outliers
 nrow(dat_drop)
