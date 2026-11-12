@@ -115,11 +115,11 @@ theme_set(mytheme())
 
 ## Assumption
 
-- The "form" of the $x$-$y$ relationship(s) must be correct
-    + The methods we learned so far assume **straight** lines
-    + We will also learn about polynomials for **curved** lines
-    + Advanced methods can take on other complex shapes
-    + This assumption is that we set up the model correctly
+- The "form" of the $x$-$y$ relationship(s) is correct
+    + The shape in the model matches the shape in the data
+    + Chapters 07--08 fit **straight** lines
+    + Chapter 09 fit **curved** lines with polynomials
+    + Advanced methods can fit other complex shapes
 
 ::: {.callout-important title="Consequences of Violating"}
 Bias in both coefficients and standard errors!
@@ -242,14 +242,16 @@ see:::plot.see_check_model(check_model(fit_violated, check = "linearity", panel 
 
 ## Assumption {.fs80}
 
-- Any cause of $y$ that correlates with an $x$ must be in the model
+- Every cause of $y$ that correlates with an $x$ is in the model
     + Such a variable is called a **confounder**
-    + Its effect does not vanish; the predictors you kept absorb it
 
-- We saw this in Chapter 07c: leaving `education` out made White Collar look *more* prestigious than Blue Collar, and putting it back reversed the sign
+- Example violation: the `prestige.csv` data (Chapter 07c assignment)
+    + `education` raises prestige and differs by `job_type`
+    + Without it, White Collar jobs look *more* prestigious than Blue Collar
+    + With it, the sign reverses: White Collar is *less* prestigious
 
 ::: {.callout-important title="Consequences of Violating"}
-Bias in the coefficients, and therefore in the tests and intervals built on them!
+The predictors left in the model absorb the confounder's effect, so their coefficients are biased, and so are the tests and intervals built on them!
 :::
 
 
@@ -295,14 +297,13 @@ Do not "control for everything": adjusting for a mediator removes the very pathw
 
 ## Assumption
 
-- All predictors $(x)$ must be measured without error
-    + With a single predictor, the slope will be underestimated
-    + With many predictors, slopes may be too low or high
+- All predictors $(x)$ are measured without error
+    + Every observed $x$ score equals its true score
 
-- When violated, called regression "dilution" or "attenuation"
+- This is rarely true for scale scores, ratings, or self-reports
 
 ::: {.callout-important title="Consequences of Violating"}
-Bias in both coefficients and standard errors!
+Bias in both coefficients and standard errors! With one predictor, the slope is too small ("attenuation" or "dilution"); with several, slopes can be too small or too large.
 :::
 
 ::: {.footer}
@@ -314,7 +315,10 @@ Error in $y$ will bias standardized (but not unstandardized) coefficients.
 
 Calculate predictors' **reliability** (the opposite of error)
 
-- How to estimate reliability is covered in Chapter 13
+- Reliability is estimated from repeated measurement
+    + e.g., multiple items on a scale
+    + e.g., multiple raters of the same behavior
+    + e.g., the same test given twice
 
 
 ## Solutions
@@ -323,7 +327,7 @@ Calculate predictors' **reliability** (the opposite of error)
     + e.g., add items, raters, or training
 
 2. Adjust coefficients for reliability
-    + e.g., correlation disattenuation (Chapter 13)
+    + e.g., correlation disattenuation
 
 3. Model reliability/error explicitly
     + e.g., total least squares estimation

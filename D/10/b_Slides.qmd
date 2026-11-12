@@ -109,7 +109,7 @@ set.seed(2021)
 
 ## Assumption {.fs80}
 
-- For any value of $x$, the residual variance are constant
+- For any value of $x$, the residual variance is constant
     + The spread of points around the line must be consistent
     + This is similar to Student's assumption of equal group variances
     
@@ -245,9 +245,9 @@ see:::plot.see_check_model(check_model(fit_violated, check = "homogeneity", pane
     + e.g., Log or power transformations
 
 2. Adjust the standard errors
-    + e.g., Huber-White (sandwich) estimation (Chapter 11)
+    + e.g., Huber-White (sandwich) estimation
 
-2. Model the error variance explicitly
+3. Model the error variance explicitly
     + e.g., weighted least squares estimation
     + e.g., location-scale models
 
@@ -404,11 +404,11 @@ check_normality(fit_violated)
     + e.g., Box-Cox transformations
     + e.g., Yeo-Johnson transformations
 
-1. Use a nonparametric approach
-    + e.g., nonparametric bootstrapping (Chapter 11)
+2. Use a nonparametric approach
+    + e.g., nonparametric bootstrapping
     + e.g., rank-based nonparametrics
     
-2. Model the outcome as non-normal
+3. Model the outcome as non-normal
     + e.g., generalized linear modeling (GLM)
     
 ::: {.footer}

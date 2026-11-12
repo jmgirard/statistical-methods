@@ -60,7 +60,7 @@ respectable effect for a life-course risk factor, and with $n = 40{,}000$ it is
 precisely estimated. It is a poor screening tool -- you would misclassify
 constantly. And it is a *disastrous* test-retest reliability: the questionnaire
 is mostly measuring noise, and every effect you estimate with it will be
-attenuated, which is Chapter 13's subject. Study B's interval runs roughly from
+attenuated (shrunk toward zero). Study B's interval runs roughly from
 .01 to .55, so the honest summary is "somewhere between nothing and a lot."
 
 Whoever drew D usually discovers mid-argument that they are defending the worst
