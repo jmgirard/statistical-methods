@@ -175,18 +175,18 @@
     "text": "Example 2\n\nI measured self-esteem with a three-item scale that turned out to have an alpha of .55. My predictor barely reached significance and the effect looks much smaller than the published literature suggests.\n\nAlpha is the scale’s reliability; .70 is the usual minimum."
   },
   {
-    "objectID": "D/10/translation.html#example-3-a-preview-of-chapter-12",
-    "href": "D/10/translation.html#example-3-a-preview-of-chapter-12",
+    "objectID": "D/10/translation.html#example-3",
+    "href": "D/10/translation.html#example-3",
     "title": "Translation Activity",
-    "section": "Example 3 (a preview of Chapter 12)",
-    "text": "Example 3 (a preview of Chapter 12)\n\nAbout 18% of my participants skipped the income question. I dropped those rows so the model would run. My reviewer wants to know whether that was defensible, and I am not sure how to answer."
+    "section": "Example 3",
+    "text": "Example 3\n\nAbout 18% of my participants skipped the income question. I dropped those rows so the model would run. My reviewer wants to know whether that was defensible, and I am not sure how to answer."
   },
   {
     "objectID": "D/10/translation.html#example-4",
     "href": "D/10/translation.html#example-4",
     "title": "Translation Activity",
     "section": "Example 4",
-    "text": "Example 4\n\nMy outcome is badly skewed and I have 40 participants. A colleague says to log it, another says to run a nonparametric test, and a third says to bootstrap the confidence intervals. They cannot all be right.\n\nThe nonparametric test and the bootstrap are previews of Chapter 11."
+    "text": "Example 4\n\nMy outcome is badly skewed and I have 40 participants. A colleague says to log it, another says to run a nonparametric test, and a third says to bootstrap the confidence intervals. They cannot all be right."
   },
   {
     "objectID": "D/10/translation.html#example-5",
@@ -662,7 +662,7 @@
     "href": "B/05/b_activity.html#the-floor-3-minutes",
     "title": "Lecture 05b Activity",
     "section": "3. The floor (3 minutes)",
-    "text": "3. The floor (3 minutes)\nOne sentence each, in order A, B, C, D. Then one round of rebuttals. Then the room votes on a ranking.\nIf you have more time: take a correlation you believe from your own area. Your partner proposes three third variables that could produce it with no direct relationship, and you say which could be ruled out by measuring something and which only by designing the study differently.\nIf you were not in class\nA and D are the informative ones; B and C are the problems. An \\(r\\) of .30 is a respectable effect for a life-course risk factor, and with \\(n = 40{,}000\\) it is precisely estimated. It is a poor screening tool – you would misclassify constantly. And it is a disastrous test-retest reliability: the questionnaire is mostly measuring noise, and every effect you estimate with it will be attenuated, which is Chapter 13’s subject. Study B’s interval runs roughly from .01 to .55, so the honest summary is “somewhere between nothing and a lot.”\nWhoever drew D usually discovers mid-argument that they are defending the worst result in the room, and that is the useful moment. The four studies share a number and share nothing else; every reaction the room has comes from context the number does not carry. That is the argument for never reporting a correlation without an interval and without saying what it is a correlation for."
+    "text": "3. The floor (3 minutes)\nOne sentence each, in order A, B, C, D. Then one round of rebuttals. Then the room votes on a ranking.\nIf you have more time: take a correlation you believe from your own area. Your partner proposes three third variables that could produce it with no direct relationship, and you say which could be ruled out by measuring something and which only by designing the study differently.\nIf you were not in class\nA and D are the informative ones; B and C are the problems. An \\(r\\) of .30 is a respectable effect for a life-course risk factor, and with \\(n = 40{,}000\\) it is precisely estimated. It is a poor screening tool – you would misclassify constantly. And it is a disastrous test-retest reliability: the questionnaire is mostly measuring noise, and every effect you estimate with it will be attenuated (shrunk toward zero). Study B’s interval runs roughly from .01 to .55, so the honest summary is “somewhere between nothing and a lot.”\nWhoever drew D usually discovers mid-argument that they are defending the worst result in the room, and that is the useful moment. The four studies share a number and share nothing else; every reaction the room has comes from context the number does not carry. That is the argument for never reporting a correlation without an interval and without saying what it is a correlation for."
   },
   {
     "objectID": "B/05/a_assignment.html#instructions",

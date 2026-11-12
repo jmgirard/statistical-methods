@@ -6,15 +6,15 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-99131190c761fa326849492283a1b6ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c50fc2874fcac956595ffed77daae241.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/quarto-contrib/lordicon-bundle-1.9.0/bundle.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+  <meta name="generator" content="quarto-1.11.9">
 
   <meta name="author" content="Jeffrey Girard">
   <title>Statistical Methods with R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -100,9 +100,9 @@
     code span.vs { color: #cc9393; } /* VerbatimString */
     code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-53e3d2ac1773787e2a3f577cd3a68c1f.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-b461aa37935e8cef86f4f2029b65fedd.css">
   <link rel="stylesheet" href="../../styles.css">
-  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -117,7 +117,7 @@
    });
 }}});
   </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -312,15 +312,14 @@
 <section class="slide level2">
 <h2>Assumption</h2>
 <ul>
-<li>The “form” of the <span class="math inline">x</span>-<span class="math inline">y</span> relationship(s) must be correct
+<li>The “form” of the <span class="math inline">x</span>-<span class="math inline">y</span> relationship(s) is correct
 <ul>
-<li>The methods we learned so far assume <strong>straight</strong> lines</li>
-<li>We will also learn about polynomials for <strong>curved</strong> lines</li>
-<li>Advanced methods can take on other complex shapes</li>
-<li>This assumption is that we set up the model correctly</li>
+<li>The shape in the model matches the shape in the data</li>
+<li>Chapters 07–08 fit <strong>straight</strong> lines</li>
+<li>Chapter 09 fit <strong>curved</strong> lines with polynomials</li>
+<li>Advanced methods can fit other complex shapes</li>
 </ul></li>
 </ul>
-<div title="Consequences of Violating">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -331,7 +330,6 @@
 </div>
 <div class="callout-content">
 <p>Bias in both coefficients and standard errors!</p>
-</div>
 </div>
 </div>
 </div>
@@ -425,14 +423,17 @@
 <section class="slide level2 fs80">
 <h2>Assumption</h2>
 <ul>
-<li>Any cause of <span class="math inline">y</span> that correlates with an <span class="math inline">x</span> must be in the model
+<li>Every cause of <span class="math inline">y</span> that correlates with an <span class="math inline">x</span> is in the model
 <ul>
 <li>Such a variable is called a <strong>confounder</strong></li>
-<li>Its effect does not vanish; the predictors you kept absorb it</li>
 </ul></li>
-<li>We saw this in Chapter 07c: leaving <code>education</code> out made White Collar look <em>more</em> prestigious than Blue Collar, and putting it back reversed the sign</li>
+<li>Example violation: the <code>prestige.csv</code> data (Chapter 07c assignment)
+<ul>
+<li><code>education</code> raises prestige and differs by <code>job_type</code></li>
+<li>Without it, White Collar jobs look <em>more</em> prestigious than Blue Collar</li>
+<li>With it, the sign reverses: White Collar is <em>less</em> prestigious</li>
+</ul></li>
 </ul>
-<div title="Consequences of Violating">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -442,8 +443,7 @@
 <p><strong>Consequences of Violating</strong></p>
 </div>
 <div class="callout-content">
-<p>Bias in the coefficients, and therefore in the tests and intervals built on them!</p>
-</div>
+<p>The predictors left in the model absorb the confounder’s effect, so their coefficients are biased, and so are the tests and intervals built on them!</p>
 </div>
 </div>
 </div>
@@ -499,14 +499,12 @@
 <section class="slide level2">
 <h2>Assumption</h2>
 <ul>
-<li>All predictors <span class="math inline">(x)</span> must be measured without error
+<li>All predictors <span class="math inline">(x)</span> are measured without error
 <ul>
-<li>With a single predictor, the slope will be underestimated</li>
-<li>With many predictors, slopes may be too low or high</li>
+<li>Every observed <span class="math inline">x</span> score equals its true score</li>
 </ul></li>
-<li>When violated, called regression “dilution” or “attenuation”</li>
+<li>This is rarely true for scale scores, ratings, or self-reports</li>
 </ul>
-<div title="Consequences of Violating">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -516,8 +514,7 @@
 <p><strong>Consequences of Violating</strong></p>
 </div>
 <div class="callout-content">
-<p>Bias in both coefficients and standard errors!</p>
-</div>
+<p>Bias in both coefficients and standard errors! With one predictor, the slope is too small (“attenuation” or “dilution”); with several, slopes can be too small or too large.</p>
 </div>
 </div>
 </div>
@@ -529,7 +526,12 @@
 <h2>Diagnostics</h2>
 <p>Calculate predictors’ <strong>reliability</strong> (the opposite of error)</p>
 <ul>
-<li>How to estimate reliability is covered in Chapter 13</li>
+<li>Reliability is estimated from repeated measurement
+<ul>
+<li>e.g., multiple items on a scale</li>
+<li>e.g., multiple raters of the same behavior</li>
+<li>e.g., the same test given twice</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -541,7 +543,7 @@
 </ul></li>
 <li>Adjust coefficients for reliability
 <ul>
-<li>e.g., correlation disattenuation (Chapter 13)</li>
+<li>e.g., correlation disattenuation</li>
 </ul></li>
 <li>Model reliability/error explicitly
 <ul>
@@ -571,7 +573,6 @@
 </ul></li>
 <li>If they <em>almost</em> fully overlap, the estimates become unstable</li>
 </ul>
-<div title="Consequences of Violating">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -582,7 +583,6 @@
 </div>
 <div class="callout-content">
 <p>Coefficients stay <strong>unbiased</strong> but become unstable; standard errors become larger, honestly reflecting that instability.</p>
-</div>
 </div>
 </div>
 </div>
@@ -882,7 +882,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1306,7 +1306,8 @@
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1315,8 +1316,69 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1330,6 +1392,7 @@
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
@@ -1376,44 +1439,54 @@
               const lineIds = lines.map((line) => {
                 return targetCell + "-" + line;
               })
-              let top = null;
-              let height = null;
-              let parent = null;
+              // Each band is positioned against its own containing block, which is
+              // not the offsetParent of the lines, so place it from client rects.
+              const placeBand = (band, firstEl, lastEl, codeBlock) => {
+                const container = band.offsetParent;
+                if (container === null) {
+                  return;
+                }
+                const containerRect = container.getBoundingClientRect();
+                // Reveal.js scales slides with a transform, so convert client
+                // pixels back to the CSS pixels of the container.
+                const scale = containerRect.height / container.offsetHeight || 1;
+                const firstRect = firstEl.getBoundingClientRect();
+                const lastRect = lastEl.getBoundingClientRect();
+                const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+                const height = (lastRect.bottom - firstRect.top) / scale;
+                band.style.top = top - 2 + "px";
+                band.style.height = height + 4 + "px";
+                if (codeBlock) {
+                  // Without the copy button wrapper, the containing block is wider
+                  // than the code block, so span the code block explicitly.
+                  const blockRect = codeBlock.getBoundingClientRect();
+                  band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+                  band.style.width = blockRect.width / scale + "px";
+                }
+              };
               if (lineIds.length > 0) {
-                  //compute the position of the single el (top and bottom and make a div)
-                  const el = window.document.getElementById(lineIds[0]);
-                  top = el.offsetTop;
-                  height = el.offsetHeight;
-                  parent = el.parentElement.parentElement;
-                if (lineIds.length > 1) {
-                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-                  height = bottom - top;
+                const el = window.document.getElementById(lineIds[0]);
+                const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                const parent = el.parentElement.parentElement;
+                // cook up a div (if necessary) and position it
+                let div = window.document.getElementById("code-annotation-line-highlight");
+                if (div === null) {
+                  div = window.document.createElement("div");
+                  div.setAttribute("id", "code-annotation-line-highlight");
+                  div.style.position = 'absolute';
+                  parent.appendChild(div);
                 }
-                if (top !== null && height !== null && parent !== null) {
-                  // cook up a div (if necessary) and position it 
-                  let div = window.document.getElementById("code-annotation-line-highlight");
-                  if (div === null) {
-                    div = window.document.createElement("div");
-                    div.setAttribute("id", "code-annotation-line-highlight");
-                    div.style.position = 'absolute';
-                    parent.appendChild(div);
-                  }
-                  div.style.top = top - 2 + "px";
-                  div.style.height = height + 4 + "px";
-                  div.style.left = 0;
-                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-                  if (gutterDiv === null) {
-                    gutterDiv = window.document.createElement("div");
-                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                    gutterDiv.style.position = 'absolute';
-                    const codeCell = window.document.getElementById(targetCell);
-                    const gutter = codeCell.querySelector('.code-annotation-gutter');
-                    gutter.appendChild(gutterDiv);
-                  }
-                  gutterDiv.style.top = top - 2 + "px";
-                  gutterDiv.style.height = height + 4 + "px";
+                placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+                let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                if (gutterDiv === null) {
+                  gutterDiv = window.document.createElement("div");
+                  gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                  gutterDiv.style.position = 'absolute';
+                  const codeCell = window.document.getElementById(targetCell);
+                  const gutter = codeCell.querySelector('.code-annotation-gutter');
+                  gutter.appendChild(gutterDiv);
                 }
+                placeBand(gutterDiv, el, lastEl);
                 selectedAnnoteEl = annoteEl;
               }
             };
@@ -1490,6 +1563,7 @@
                 interactiveBorder: 10,
                 theme: 'light-border',
                 placement: 'right',
+                plugins: [hideOnEscAndFocusOut],
                 popperOptions: {
                   modifiers: [
                   {
